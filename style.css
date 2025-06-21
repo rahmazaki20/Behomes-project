@@ -1257,6 +1257,7 @@
             display: grid;
             gap: 1.5rem;
             grid-template-columns: repeat(1, minmax(0, 1fr));
+                 
         }
 
         @media (min-width: 768px) {
@@ -1273,10 +1274,9 @@
 
 
         .event-card {
-            background-color: #23293f; 
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            /* overflow: hidden; */
+            /* background-color: #33374c;  */
+            /* border-radius: 8px; */
+            /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
             position: relative;
             margin-bottom: 188px;
          
@@ -1284,9 +1284,10 @@
 
         .event-card img {
             width: 100%;
-            height: 100%;
+            height: 50%;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
+            margin: 0;
         }
 
         .card-icon {
@@ -1311,7 +1312,8 @@
 
         .card-content {
             padding: 1rem;
-             background-color: #1a202c; 
+            background-color: #23293f; 
+            margin: 0;
         }
 
         .card-meta {
@@ -1323,7 +1325,6 @@
             margin-bottom: 0.5rem;
             
         }
-
         .card-title {
             font-size: 13px;
             color: #ffffff;
