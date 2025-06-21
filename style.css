@@ -150,6 +150,7 @@
     margin: auto;
     padding: 2rem;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
 }
 
 .speakers-header {
@@ -647,7 +648,7 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background-color: #3b4252; 
+            /* background-color: #3b4252;  */
             
             position: absolute;
             z-index: 2;
@@ -725,33 +726,29 @@
         }
 
  /* <!-- parking section --> */
-        .parking-section-container {
-            width: 90%; /* Responsive width */
-            max-width: 1296px; /* Max width as per previous screenshot dimensions */
-            margin: 0 auto; /* Centered horizontally, removed fixed top/bottom margin */
+         .parking-section-container {
+            width: 90%;
+            margin: 180px auto;
             display: flex;
-            flex-direction: column; /* Stack columns on small screens */
-            align-items: center;
-            gap: 2rem; /* Gap between stacked elements */
+            flex-direction: column;
+            gap: 2rem;
             box-sizing: border-box;
-            background-color: #2d3748; /* Background color for the section container */
-            border-radius: 8px; /* Rounded corners for the container */
-            padding: 2rem; /* Inner padding for the container */
-            min-height: 634px; /* Min height as per screenshot */
         }
 
         .parking-content-wrapper {
             display: flex;
-            flex-direction: column; /* Stack video and image/text on small screens */
+            flex-direction: column;
             width: 100%;
-            gap: 2rem; /* Gap between video and image/text block */
-            align-items: center; /* Center items on small screens */
+            gap: 2rem;
+            border-radius: 8px;
+            padding: 2rem;
+            box-sizing: border-box;
+            align-items: center;
         }
 
         .video-block {
-            flex: 1; /* Allow video block to take available space */
             width: 100%;
-            max-width: 480px; /* Max width for video */
+            max-width: 306px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -760,9 +757,9 @@
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width * 100%) */
+            padding-bottom: calc(634 / 306 * 100%);
             height: 0;
-            width: 100%; /* Take full width of video-block */
+            width: 100%;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -777,34 +774,37 @@
             object-fit: cover;
         }
 
-        /* Updated .video-caption styles */
         .video-caption {
             font-family: 'Manrope', sans-serif;
-            font-weight: 400;
-            font-size: 0.9rem;
-            color: #a0aec0;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: 0px;
+            color: #ffffff;
             text-align: center;
             margin-top: 0.5rem;
-            width: 305px; /* Specific width as per request */
-            height: 56px; /* Specific height as per request */
-            opacity: 0.85; /* Specific opacity as per request */
-            /* Ensure text wraps correctly within fixed dimensions if needed */
-            overflow: hidden; /* Hide overflow if text doesn't fit */
+            width: 305px;
+            height: 56px;
+            opacity: 0.85;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-break: break-word;
         }
 
         .image-text-block {
-            flex: 2; /* Allow image/text block to take more space */
-            width: 100%; /* Take full width on small screens */
-            position: relative; /* For text positioning over image */
+            width: 100%;
+            position: relative;
             display: flex;
-            justify-content: center; /* Center image for small screens */
-            align-items: center; /* Center image for small screens */
+            justify-content: center;
+            align-items: center;
         }
 
         .image-text-block img {
-            width: 100%; /* Image takes full width of its container on mobile */
-            height: auto; /* Auto height to maintain aspect ratio */
-            object-fit: cover; /* Changed to cover for better filling as per screenshot */
+            width: 100%;
+            height: auto;
+            object-fit: cover;
             border-radius: 8px;
             display: block;
         }
@@ -815,106 +815,154 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+
+        .parking-keyword-box {
+            background-color: rgba(45, 55, 72, 0.8); /* Re-added background color */
+            border-radius: 30px;
+            padding: 24px 32px;
+            width: 214px;
+            height: 98px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            position: absolute;
+            top: 49.7px;
+            left: 55px;
+            gap: 10px; /* Re-added gap as per original instruction */
+        }
+
+        .parking-keyword-box h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 125%;
+            letter-spacing: 0px;
+            margin: 0;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cost-details {
+            width: 587px;
+            height: 150px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align text to top */
-            align-items: center; /* Center text horizontally */
-            padding: 2rem;
+            justify-content: center;
+            align-items: flex-start;
             box-sizing: border-box;
-            text-align: center; /* Center text within overlay */
+            z-index: 2;
+            position: absolute;
+            top: 49.7px;
+            left: 328px;
         }
 
-        /* Updated .image-text-overlay h3 styles ("Parking" title) */
-        .image-text-overlay h3 {
+        .cost-details p {
             font-family: 'Manrope', sans-serif;
-            font-weight: 800; /* Specific font weight */
-            font-size: 40px; /* Specific font size */
+            font-weight: 800;
+            font-size: 40px;
             line-height: 125%;
             letter-spacing: 0px;
-            margin-bottom: 0.5rem;
+            margin: 0;
             color: #ffffff;
+            text-align: left;
         }
 
-        /* Updated .image-text-overlay p styles (Cost text) */
-        .image-text-overlay p {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800; /* Specific font weight */
-            font-size: 40px; /* Specific font size */
-            line-height: 125%;
-            letter-spacing: 0px;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
+        .cost-details .highlight {
+            color: #d6a25b;
+            font-weight: 800;
         }
 
-        .image-text-overlay .highlight {
-            color: #d6a25b; /* Golden highlight color */
-            font-weight: 700;
-        }
-
-
-        /* Responsive Adjustments */
         @media (min-width: 768px) {
-            .parking-section-container {
-                flex-direction: row; /* Side-by-side on larger screens */
-                justify-content: space-between;
-                align-items: flex-start; /* Align items to top */
-                gap: 4rem; /* More space between sections */
-                padding: 3rem; /* More padding on larger screens */
-            }
-
             .parking-content-wrapper {
-                flex-direction: row; /* Video and image/text side-by-side */
+                flex-direction: row;
                 justify-content: center;
                 align-items: flex-start;
                 gap: 2rem;
+                padding: 2rem;
             }
 
             .video-block {
-                width: 480px; /* Fixed width for video on desktop */
+                width: 306px;
+                height: 634px;
             }
             .video-wrapper {
-                padding-bottom: 270px; /* Fixed height for video (16:9 ratio) */
+                padding-bottom: 0;
+                height: 100%;
             }
 
             .image-text-block {
-                width: 950px; /* Specific width for desktop image block */
-                height: 634px; /* Specific height for desktop image block */
-                flex-shrink: 0; /* Prevent shrinking */
-                justify-content: flex-start; /* Align image to start */
-                align-items: flex-start; /* Align image to start */
+                width: 950px;
+                height: 634px;
+                flex-shrink: 0;
+                position: relative;
             }
             .image-text-block img {
-                width: 100%; /* Image fills its specific desktop container */
-                height: 100%; /* Image fills its specific desktop container */
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
             }
-
-            .image-text-overlay {
-                justify-content: flex-start; /* Align text to top */
-                align-items: flex-start; /* Align text to left */
-                padding: 0; /* Remove padding as content positioning is specific */
-                left: 100px; /* Adjust as needed for specific position relative to image */
-                top: 50px; /* Adjust as needed */
-                text-align: left; /* Align text to left */
+            .parking-keyword-box {
+                position: absolute;
+                top: 49.7px;
+                left: 55px;
+            }
+            .cost-details {
+                position: absolute;
+                top: 49.7px;
+                left: 328px;
             }
         }
 
-        /* Responsive adjustments for mobile screens */
         @media (max-width: 767px) {
             .parking-section-container {
                 margin: 40px auto;
                 padding: 1rem;
-                min-height: auto; /* Allow height to shrink */
+                min-height: auto;
             }
             .video-caption {
-                width: 100%; /* Allow full width on mobile */
-                height: auto; /* Auto height on mobile */
-                font-size: 0.8rem;
+                width: 100%;
+                height: auto;
+                font-size: 0.9rem;
+                text-align: center;
             }
-            .image-text-overlay h3 {
-                font-size: 1.5rem; /* Adjust font size for mobile overlay */
+            
+            .image-text-block {
+                height: 400px;
+                overflow: hidden;
             }
-            .image-text-overlay p {
-                font-size: 1.2rem; /* Adjust font size for mobile overlay */
+            .image-text-block img {
+                height: 100%;
+                width: auto;
+            }
+            
+            .image-text-overlay {
+                position: static;
+                width: auto;
+                height: auto;
+                padding: 1rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .parking-keyword-box, .cost-details {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+                margin: 0 auto 1rem auto;
+                text-align: center;
+                align-items: center;
+            }
+            .parking-keyword-box h3, .cost-details p {
+                font-size: 1.5rem;
             }
         }
 
@@ -922,16 +970,16 @@
             .parking-section-container {
                 margin: 40px auto;
                 padding: 1rem;
-                min-height: auto; /* Allow height to shrink */
+                min-height: auto;
             }
             .video-caption {
                 font-size: 0.8rem;
             }
-            .image-text-overlay h3 {
-                font-size: 1.5rem;
-            }
-            .image-text-overlay p {
+            .parking-keyword-box h3 {
                 font-size: 1.2rem;
+            }
+            .cost-details p {
+                font-size: 1rem;
             }
         }
  /* <!-- QRCode section --> */
@@ -1209,7 +1257,7 @@
             font-family: 'Manrope';
             background-color: #1F2937;
             border-radius: 0.5rem; 
-            /* padding: 3rem 2rem;  */
+            padding: 3rem 2rem; 
             box-sizing: border-box;
         }
 
@@ -1327,35 +1375,21 @@
         }
 /* last section */
         .events-organized-section {
-            width: 90%; 
-            max-width: 1200px; 
+            max-width: 1296px; 
             margin: 88px auto;
             background-image: url('./images/15.png'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border-radius: 0.75rem;
+            border-radius: 20px;
             padding: 4rem 2rem;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
-            overflow: hidden; 
+            font-family: 'Manrope', sans-serif;
         }
-        .events-organized-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 0.75rem; 
-            z-index: 1;
-        }
-
         .content-wrapper {
             position: relative;
             z-index: 2; 
@@ -1363,37 +1397,33 @@
         }
 
         .events-organized-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 42px;
+            font-weight: 800;
             margin-bottom: 1rem;
             color: #ffffff;
             line-height: 1.2;
         }
 
         .events-organized-section p {
-            font-size: 1.1rem;
+            font-size: 20px;
+            font-weight: 400;
             color: #f0f0f0;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .start-button {
-            background-color: #d6a25b; 
+            background-color: #CC9D6A; 
             color: white; 
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
+            padding:13px 33px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 16px;
             display: inline-block;
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .start-button:hover {
-            background-color: #e0b06b;
-        }
-
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .events-organized-section {
@@ -1409,7 +1439,7 @@
             }
 
             .start-button {
-                padding: 0.6rem 1.5rem; /* Smaller button padding on mobile */
-                font-size: 1rem; /* Smaller button text on mobile */
+                padding: 0.6rem 1.5rem; 
+                font-size: 1rem; 
             }
         }     
