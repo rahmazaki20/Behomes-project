@@ -14,10 +14,10 @@
             width: 100%;
             overflow: hidden;
             color: #ffffff;
-            line-height: 1.6;
+            /* line-height: 1.6; */
             margin-bottom: 80px;
             box-sizing: border-box;
-            overflow-x: hidden;
+            /* overflow-x: hidden; */
             max-height: 100vh;
         }
         .conference-image-column {
@@ -53,7 +53,7 @@
 
         .conference-text-column .date {
             font-weight: 800;
-            font-size: 1.75rem; /* 28px */
+            font-size: 28px; 
             line-height: 130%;
             letter-spacing: 0px;
             color: #CC9D6A;
@@ -61,7 +61,7 @@
 
         .conference-text-column .title {
             font-weight: 800;
-            font-size: 5rem; /* 80px */
+            font-size: 80px; 
             line-height: 130%;
             letter-spacing: 0px;
             color: #ffffff;
@@ -78,12 +78,13 @@
             color: #ffffff;
             opacity: 0.7; 
             font-size: 1rem;
+            font-weight: 400;
         }
 
         .conference-text-column .location-description svg {
             flex-shrink: 0; 
-            width: 16px; 
-            height: 21px; 
+            width: 24px; 
+            height: 24px; 
         }
         .register-button {
             width: 190px;
@@ -114,7 +115,6 @@
             color: #CC9D6A;
         }
 
-
         @media (max-width: 1024px) {
         .digital-conference-section {
             flex-direction: column;
@@ -143,11 +143,15 @@
         }
 
         .conference-text-column .title {
-            font-size: 2rem;
+            font-size: 1rem;
         }
         .participants-count {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
+        .scroll-hint {
+         opacity: 0;
+        }
+        
         }
 /* <!-- Our top speakers --> */
 .speakers-container {
@@ -236,7 +240,7 @@
     color: #ffffff;
 }
  .speaker-card img {
-    width: 100%; /* instead of 306px */
+    width: 100%; 
     height: 320px;
     object-fit: cover;
     border-radius: 0.5rem ;
@@ -267,6 +271,7 @@
     margin: 0;
     padding: 0 1rem;
 }
+
 /* <!-- About the digital conference --> */
         .about-conference-section {
 
@@ -581,146 +586,388 @@
         font-size: 12px;
     }
 }
+/* <!-- QRCode section --> */
+        .networking-section {
+            background-color: #CC9D6A;
+            padding: 4rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Manrope';
+        }
+
+        .networking-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .qr-card-column {
+            position: relative;
+            width: 100%;
+            max-width: 636px;
+            height: 338px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        .qr-card-column .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .qr-content-overlay {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            justify-content: center; 
+            width: 80%;
+            height: 100%;
+            padding: 1rem; 
+            box-sizing: border-box;
+            color: #1a202c;
+        }
+
+        .text-button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            gap: 1rem;
+        }
+
+        .qr-content-overlay img.qr-code {
+            position: static; 
+            width: 120px; 
+            height: 120px;
+            object-fit: contain;
+            margin: 1.5rem 0 1rem 0; 
+            z-index: 2;
+        }
+
+        .qr-content-overlay h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 2rem; 
+            line-height: 1.2;
+            margin: 0;
+            text-align: center; 
+            margin-bottom: 1rem; 
+        }
+
+        .join-button {
+            background-color: #CC9D6A;
+            color: #ffffff;
+            padding: 13px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%; 
+            max-width: 200px; 
+            text-align: center;
+        }
+
+        .join-button:hover {
+            background-color: #e0b06b;
+        }
+
+        .networking-text-column {
+            flex: 1;
+            text-align: center;
+            max-width: 600px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .networking-text-column h2 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 125%;
+            letter-spacing: 0px;
+            margin-bottom: 1rem;
+        }
+
+        .networking-text-column .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+            text-align: left;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .networking-text-column .bullet-point .icon-circle {
+            background-color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .networking-text-column .bullet-point svg {
+            width: 20px;
+            height: 20px;
+            fill: #10162E;
+        }
+
+        .networking-text-column .bullet-point p {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 160%;
+            letter-spacing: 0px;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .networking-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .qr-card-column {
+                max-width: 636px;
+                height: 338px;
+            }
+
+            .qr-content-overlay {
+                padding: 2rem;
+                flex-direction: column;
+                align-items: flex-start; 
+                justify-content: space-between; 
+            }
+
+            .text-button-group {
+                align-items: flex-start; 
+                gap: 0.5rem;
+                margin-top: 0;
+            }
+
+            .qr-content-overlay h3 {
+                text-align: left;
+                font-size: 40px;
+                margin-bottom: 40px; 
+            }
+
+            .qr-content-overlay img.qr-code {
+                position: absolute; 
+                top: 2rem;
+                right: 2rem;
+                width: 150px;
+                height: 150px;
+                margin: 0; 
+            }
+
+            .join-button {
+                margin-top: 0.5rem;
+                align-self: flex-start;
+                width: auto; 
+                max-width: none; 
+            }
+
+            .networking-text-column {
+                text-align: left;
+                align-items: flex-start;
+            }
+            .networking-text-column h2 {
+                font-size: 40px;
+            }
+            .networking-text-column .bullet-point p {
+                font-size: 20px;
+            }
+        }
 /* map section */
         .map-section {
-            width: 90%; 
-            margin: 80px auto; 
+            width: 90%;
+            max-width: 1296px;
+            margin: 80px auto;
             display: flex;
-            flex-direction: column; 
-            gap: 2rem; 
+            flex-direction: column;
+            gap: 2rem;
             box-sizing: border-box;
+            padding: 2rem;
+            border-radius: 8px;
         }
 
         .map-header {
             width: 100%;
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 1rem; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
         .map-header h2 {
+            font-family: 'Manrope', sans-serif;
             font-weight: 800;
-            font-size: 24px; 
+            font-size: 24px;
             line-height: 140%;
             letter-spacing: 0px;
             color: #ffffff;
-            margin-bottom: 16px;
-
+            margin: 0;
         }
         .map-header p {
+            font-family: 'Manrope', sans-serif;
             font-weight: 800;
-            font-size: 40px; 
+            font-size: 40px;
             line-height: 125%;
             letter-spacing: 0px;
             color: #ffffff;
+            margin: 0;
         }
-        .map-header .arrow-image { 
-            width: 80px; 
+        .map-header .arrow-image {
+            width: 80px;
             height: auto;
             margin-top: 116px;
         }
         .map-content {
-            width: 100%; 
+            width: 100%;
             display: flex;
             flex-direction: column; 
-            gap: 1.5rem; 
-            align-items: center;
-            position: relative;
+            gap: 1.5rem;
+            align-items: center; 
+            position: relative; 
         }
         .map-content img {
-            width: 952px; 
-            height: 440px; 
+            width: 100%;
+            max-width: 952px;
+            height: auto;
             border-radius: 6px;
             object-fit: cover;
-            display: block; 
+            display: block;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-             position: relative; 
-            z-index: 1; 
+            position: relative; 
+            z-index: 1;
         }
         .map-container {
-            width: 416px; 
-            height: 240px; 
+            width: 100%; 
+            max-width: 416px; 
+            height: 240px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            /* background-color: #3b4252;  */
-            
-            position: absolute;
-            z-index: 2;
-            transform: translate(130%, 15%);
-
+            background-color: #3b4252;
+            position: static; 
+            transform: none; 
+            margin: 0 auto; 
         }
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
             display: block;
-
+            filter: grayscale(100%) invert(90%);
         }
 
-        /* Responsive adjustments for desktop/larger screens */
         @media (min-width: 768px) {
             .map-section {
-                flex-direction: row; 
-                gap: 2rem; 
+                flex-direction: row;
+                gap: 2rem;
             }
 
             .map-header {
-                width: 20%; 
-                text-align: left; 
-                align-items: flex-start; 
-                flex-direction: column; 
+                width: 20%;
+                text-align: left;
+                align-items: flex-start;
+                flex-direction: column;
             }
 
             .map-content {
-                width: 80%; 
-                flex-direction: row; 
-                justify-content: flex-end; 
+                width: 80%;
+                flex-direction: row;
+                justify-content: flex-end;
                 align-items: flex-start;
                 position: relative;
             }
 
             .map-content img {
-                width: 952px; 
-                height: 440px; 
+                width: 952px;
+                height: 440px;
                 position: absolute; 
                 top: 0;
                 right: 0;
-                z-index: 1; 
+                z-index: 1;
             }
 
             .map-container {
                 position: absolute; 
-                height: 240px; 
-                bottom: -50px;
-                left: 0; 
-                z-index: 2; 
+                width: 416px; 
+                height: 240px;
+                bottom: -150px;
+                left: 450px; 
+                z-index: 2;
+                transform: none; 
             }
         }
 
-        /* Responsive adjustments for very small screens */
-        @media (max-width: 500px) {
+        @media (max-width: 767px) {
             .map-section {
-                margin: 40px auto; 
+                margin: 40px auto;
                 padding: 1rem;
+            }
+            
+            .map-header {
+                flex-direction: column; 
+                align-items: flex-start; 
+                text-align: left;
+                padding-left: 1rem; 
             }
             .map-header h2 {
                 font-size: 1.5rem;
+                margin-bottom: 0.5rem; 
             }
             .map-header p {
-                font-size: 2.5rem;
+                font-size: 2rem; 
+                line-height: 1.2;
+            }
+            .map-header .arrow-image {
+                width: 60px; 
+                margin-top: 1rem; 
+                align-self: flex-start; 
+            }
+            
+            .map-content {
+                flex-direction: column; 
+                align-items: center; 
+                padding: 0 1rem; 
             }
             .map-content img {
                 width: 100%; 
                 height: auto; 
             }
             .map-container {
-                width: 100%;
-                height: 200px; 
+                width: 100%; 
+                height: 200px;
+                margin-top: 1.5rem; 
             }
         }
-
  /* <!-- parking section --> */
          .parking-section-container {
             max-width: 1296px;
@@ -772,7 +1019,15 @@
             height: 100%;
             object-fit: cover;
         }
-
+        .video-wrapper .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; 
+            pointer-events: none; 
+            transition: opacity 0.3s ease; 
+        }
         .video-caption {
             font-weight: 800;
             font-size: 20px;
@@ -970,269 +1225,7 @@
                 font-size: 1rem;
             }
         }
- /* <!-- QRCode section --> */
-        .networking-section {
-            background-color: #CC9D6A; 
-            padding: 4rem 1.5rem; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            box-sizing: border-box;
-            font-family: 'Manrope';
-        }
-
-        .networking-container {
-            max-width: 1200px; 
-            width: 100%;
-            display: flex;
-            flex-direction: column; 
-            gap: 3rem; 
-            align-items: center; 
-        }
-
-        .qr-card-column {
-            position: relative;
-            width: 100%;
-            max-width: 636px; 
-            height: 338px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0; 
-            box-sizing: border-box;
-        }
-
-        .qr-card-column .background-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .qr-content-overlay {
-            position: relative; 
-            z-index: 1; 
-            display: flex;
-            flex-direction: column; 
-            align-items: flex-start; 
-            /* justify-content: space-evenly;  */
-            width: 85%;
-            height: 100%;
-            padding: 2rem; 
-            box-sizing: border-box;
-            color: #1a202c;
-        }
-        .text-button-group {
-            display: flex;
-            flex-direction: column; 
-            align-items: flex-start; 
-            gap: 1rem; 
-        }
-        .qr-content-overlay img.qr-code {
-            position: absolute; 
-            top: 2rem;
-            right: 2rem; 
-            width: 150px; 
-            height: 150px;
-            object-fit: contain;
-            margin: 0; 
-            z-index: 2; 
-        }
-
-        .qr-content-overlay h3 {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            font-size: 40px;
-            line-height: 1.2;
-            margin: 0;
-            text-align: left; 
-            margin-bottom: 40px; 
-        }
-
-        .join-button {
-            background-color: #CC9D6A; 
-            color: #ffffff; 
-            padding: 13px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .join-button:hover {
-            background-color: #e0b06b;
-        }
-
-        .networking-text-column {
-            flex: 1;
-            text-align: center; 
-            max-width: 600px; 
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .networking-text-column h2 {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 800;
-            font-size: 40px;
-            line-height: 125%;
-            letter-spacing: 0px;
-            margin-bottom: 1rem;
-        }
-
-        .networking-text-column .bullet-point {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            color: #f0f0f0;
-            text-align: left;
-            width: 100%;
-            max-width: 450px; 
-        }
-
-        .networking-text-column .bullet-point .icon-circle { 
-            background-color: white;
-            border-radius: 50%;
-            width: 40px; 
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            margin-top: 0.25rem; 
-        }
-
-        .networking-text-column .bullet-point svg {
-            width: 20px; 
-            height: 20px;
-            fill: #10162E; 
-        }
-
-        .networking-text-column .bullet-point p {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 400;
-            font-size: 20px; 
-            line-height: 160%;
-            letter-spacing: 0px;
-            margin: 0;
-        }
-        @media (min-width: 768px) {
-            .networking-container {
-                flex-direction: row; 
-                justify-content: space-between; 
-                align-items: flex-start; 
-            }
-
-            .qr-card-column {
-                max-width: 636px; 
-                height: 338px; 
-            }
-
-            .qr-content-overlay {
-                padding: 2rem; 
-                justify-content: space-between; 
-                flex-direction: column; 
-                align-items: flex-start; 
-            }
-
-            .text-button-group {
-                align-items: flex-start; 
-                gap: 0.5rem; 
-                margin-top: 0; 
-            }
-
-            .qr-content-overlay h3 {
-                text-align: left; 
-                font-size: 40px; 
-            }
-            .qr-content-overlay img.qr-code {
-                top: 2rem; 
-                right: 2rem; 
-            }
-
-            .join-button {
-                margin-top: 0.5rem; 
-                align-self: flex-start; 
-            }
-
-            .networking-text-column {
-                text-align: left; 
-                align-items: flex-start; 
-            }
-            .networking-text-column h2 {
-                font-size: 40px;
-            }
-            .networking-text-column .bullet-point p {
-                font-size: 20px; 
-            }
-        }
-
-        /* Responsive adjustments for smaller screens (e.g., mobile) */
-        @media (max-width: 767px) {
-            .networking-section {
-                padding: 2rem 1rem; 
-            }
-            .networking-container {
-                gap: 2rem;
-            }
-            .qr-card-column {
-                width: 100%; 
-                height: auto; 
-                min-height: 280px; 
-                max-width: none; 
-            }
-            .qr-content-overlay {
-                flex-direction: column; 
-                gap: 1.5rem; 
-                justify-content: center; 
-                padding: 1rem; 
-                align-items: center; 
-            }
-            .text-button-group {
-                align-items: center; 
-                gap: 0.5rem; 
-                margin-top: 1rem; 
-            }
-            .qr-content-overlay h3 {
-                text-align: center; 
-                font-size: 2rem; 
-            }
-            .qr-content-overlay img.qr-code {
-                position: static; 
-                margin-left: 0; 
-                margin-top: 1.5rem; 
-                width: 120px; 
-                height: 120px;
-            }
-            .join-button {
-                width: 80%; 
-                max-width: 200px;
-                margin-top: 1rem; 
-                align-self: center;
-            }
-            .networking-text-column h2 {
-                font-size: 32px; 
-            }
-            .networking-text-column .bullet-point {
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center; 
-            }
-            .networking-text-column .bullet-point p {
-                font-size: 1rem; 
-            }
-            .networking-text-column .bullet-point i { 
-                margin-bottom: 0.5rem; 
-            }
-        }
+ 
 /* <!-- Next Event section --> */
         .containe-events {
             width: 100%;
@@ -1362,7 +1355,7 @@
         }
 /* last section */
         .events-organized-section {
-            max-width: 1296px; 
+            max-width: 1000px; 
             margin: 88px auto;
             background-image: url('./images/15.png'); 
             background-size: cover;
