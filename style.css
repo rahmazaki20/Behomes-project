@@ -6,6 +6,7 @@
             width: 100%;
             background: #10162E;
             color: #ffffff;
+            font-family: 'Manrope';
             }
        .digital-conference-section {
             display: flex;
@@ -25,6 +26,15 @@
             min-height: 300px; 
             position: relative;
         }
+        .conference-image-column p {
+            position: absolute;
+            bottom: 60px;
+            left:250px;
+            font-size: 16px;
+            font-family: 400;
+            display: flex;
+        }
+
         .conference-image-column img {
             width:100%;
             height:100%;
@@ -146,7 +156,7 @@
         }
 /* <!-- Our top speakers --> */
 .speakers-container {
-    width: 90%;
+    width: 75%;
     margin: auto;
     padding: 2rem;
     box-sizing: border-box;
@@ -727,57 +737,55 @@
 
  /* <!-- parking section --> */
          .parking-section-container {
-            width: 90%;
-            margin: 180px auto;
+            max-width: 1296px;
+            margin: auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             box-sizing: border-box;
+          
         }
 
         .parking-content-wrapper {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             width: 100%;
             gap: 2rem;
             border-radius: 8px;
             padding: 2rem;
             box-sizing: border-box;
+            margin-top: 180px;
             align-items: center;
+            overflow: hidden; 
         }
 
         .video-block {
             width: 100%;
-            max-width: 306px;
+            max-width: 306px; 
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-                width: 306px;
-    height: 634px;
         }
-
 
         .video-wrapper {
             position: relative;
             padding-bottom: calc(634 / 306 * 100%);
-            height: 0;
+            height: 0; 
             width: 100%;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-}
-
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .video-caption {
             font-family: 'Manrope', sans-serif;
@@ -786,8 +794,7 @@
             line-height: 140%;
             letter-spacing: 0px;
             color: #ffffff;
-            text-align: center;
-            margin-top: 0.5rem;
+            margin-top: 24px;
             width: 305px;
             height: 56px;
             opacity: 0.85;
@@ -795,7 +802,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            word-break: break-word;
+            text-align: left;
         }
 
         .image-text-block {
@@ -804,6 +811,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .image-text-block img {
@@ -814,16 +823,10 @@
             display: block;
         }
 
-        .image-text-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        /* No .image-text-overlay styling as the div is removed in HTML */
 
         .parking-keyword-box {
-            background-color: rgba(45, 55, 72, 0.8); /* Re-added background color */
+            background-color: rgba(45, 55, 72, 0.8);
             border-radius: 30px;
             padding: 24px 32px;
             width: 214px;
@@ -836,7 +839,7 @@
             position: absolute;
             top: 49.7px;
             left: 55px;
-            gap: 10px; /* Re-added gap as per original instruction */
+            gap: 10px;
         }
 
         .parking-keyword-box h3 {
@@ -882,25 +885,27 @@
 
         @media (min-width: 768px) {
             .parking-content-wrapper {
-                flex-direction: row;
+                width: 1296px; 
+                height: 634px;
+                gap: 40px; 
+                flex-direction: row; 
                 justify-content: center;
                 align-items: flex-start;
-                gap: 2rem;
                 padding: 2rem;
             }
 
             .video-block {
-                width: 306px;
-                height: 634px;
+                width: 306px; 
+                height: 100%; 
             }
             .video-wrapper {
-                padding-bottom: 0;
-                height: 100%;
+                padding-bottom: 0; 
+                height: 100%; 
             }
 
             .image-text-block {
                 width: 950px;
-                height: 634px;
+                height: 100%; 
                 flex-shrink: 0;
                 position: relative;
             }
@@ -940,25 +945,20 @@
             .image-text-block {
                 height: 400px;
                 overflow: hidden;
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center;
+                align-items: center;
+                padding: 1rem; 
+                box-sizing: border-box;
             }
             .image-text-block img {
                 height: 100%;
                 width: auto;
             }
             
-            .image-text-overlay {
-                position: static;
-                width: auto;
-                height: auto;
-                padding: 1rem;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-            }
-
             .parking-keyword-box, .cost-details {
-                position: static;
+                position: static; 
                 width: 100%;
                 height: auto;
                 padding: 1rem;
@@ -1046,36 +1046,35 @@
 
         .text-button-group {
             display: flex;
-            flex-direction: column; /* Stack h3 and button */
-            align-items: flex-start; /* Align text and button to start */
-            gap: 1rem; /* Space between h3 and button */
+            flex-direction: column; 
+            align-items: flex-start; 
+            gap: 1rem; 
         }
 
-        /* QR code directly positioned for desktop */
         .qr-content-overlay img.qr-code {
-            position: absolute; /* Position absolutely */
-            top: 2rem; /* Align to the top of .qr-content-overlay (based on padding) */
-            right: 2rem; /* Align to the right of .qr-content-overlay (based on padding) */
-            width: 150px; /* Adjust QR code size */
+            position: absolute; 
+            top: 2rem; 
+            right: 2rem; 
+            width: 150px; 
             height: 150px;
             object-fit: contain;
-            margin: 0; /* Remove default margins */
-            z-index: 2; /* Ensure it's above other content if overlapping */
+            margin: 0; 
+            z-index: 2; 
         }
 
         .qr-content-overlay h3 {
             font-family: 'Manrope', sans-serif;
             font-weight: 800;
-            font-size: 40px; /* Matches screenshot font size for title */
+            font-size: 40px; 
             line-height: 1.2;
             margin: 0;
-            text-align: left; /* Align text to left */
-            margin-bottom: 40px; /* Space between title and button */
+            text-align: left; 
+            margin-bottom: 40px; 
         }
 
         .join-button {
-            background-color: #CC9D6A; /* Golden button color as per user provided CSS */
-            color: #ffffff; /* White text for button as per user provided CSS */
+            background-color: #CC9D6A; 
+            color: #ffffff;
             padding: 13px 20px;
             border-radius: 6px;
             text-decoration: none;
@@ -1092,18 +1091,18 @@
 
         .networking-text-column {
             flex: 1;
-            text-align: center; /* Center on small screens */
-            max-width: 600px; /* Limit width for readability */
+            text-align: center; 
+            max-width: 600px; 
             color: #ffffff;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center content on small screens */
+            align-items: center; 
         }
 
         .networking-text-column h2 {
             font-family: 'Manrope', sans-serif;
             font-weight: 800;
-            font-size: 40px; /* Specific font size */
+            font-size: 40px; 
             line-height: 125%;
             letter-spacing: 0px;
             margin-bottom: 1rem;
@@ -1115,13 +1114,13 @@
             gap: 1rem;
             margin-bottom: 1rem;
             color: #f0f0f0;
-            text-align: left; /* Ensure text within bullet points is left-aligned */
-            width: 100%; /* Take full width to align content */
-            max-width: 450px; /* Max width for bullet points */
+            text-align: left; 
+            width: 100%;
+            max-width: 450px; 
         }
 
         .networking-text-column .bullet-point i {
-            color: #d6a25b; /* Golden icon color */
+            color: #d6a25b;
             font-size: 1.25rem;
             margin-top: 0.25rem;
             flex-shrink: 0;
@@ -1130,7 +1129,7 @@
         .networking-text-column .bullet-point p {
             font-family: 'Manrope', sans-serif;
             font-weight: 400;
-            font-size: 20px; /* Specific font size */
+            font-size: 20px; 
             line-height: 160%;
             letter-spacing: 0px;
             margin: 0;
@@ -1139,113 +1138,111 @@
         /* Responsive adjustments for desktop/larger screens */
         @media (min-width: 768px) {
             .networking-container {
-                flex-direction: row; /* Side-by-side on larger screens */
-                justify-content: space-between; /* Distribute space */
-                align-items: flex-start; /* Align to top */
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: flex-start; /
             }
 
             .qr-card-column {
-                max-width: 636px; /* Maintain fixed width for desktop */
-                height: 338px; /* Maintain fixed height for desktop */
+                max-width: 636px; 
+                height: 338px;
             }
 
             .qr-content-overlay {
-                padding: 2rem; /* More padding on desktop */
-                justify-content: space-between; /* Space out content vertically */
-                flex-direction: column; /* Stack text-button-group and anything else if needed */
-                align-items: flex-start; /* Align content to the left */
+                padding: 2rem; 
+                justify-content: space-between; 
+                flex-direction: column; 
+                align-items: flex-start; 
             }
 
             .text-button-group {
-                align-items: flex-start; /* Left align text and button */
-                gap: 0.5rem; /* Reduced gap */
-                margin-top: 0; /* Remove any default top margin */
+                align-items: flex-start; 
+                gap: 0.5rem; 
+                margin-top: 0; 
             }
 
             .qr-content-overlay h3 {
-                text-align: left; /* Align text left */
-                font-size: 40px; /* Specific font size for desktop */
+                text-align: left;
+                font-size: 40px;
             }
-
-            /* No changes needed for qr-code on desktop as it's already absolutely positioned */
             .qr-content-overlay img.qr-code {
-                top: 2rem; /* Consistent top padding for QR */
-                right: 2rem; /* Consistent right padding for QR */
+                top: 2rem; 
+                right: 2rem; 
             }
 
             .join-button {
-                margin-top: 0.5rem; /* Small margin after h3 */
-                align-self: flex-start; /* Align button to start within its group */
+                margin-top: 0.5rem; 
+                align-self: flex-start; 
             }
 
             .networking-text-column {
-                text-align: left; /* Align text to left on larger screens */
-                align-items: flex-start; /* Align items to start */
+                text-align: left; 
+                align-items: flex-start; 
             }
             .networking-text-column h2 {
-                font-size: 40px; /* Maintain font size */
+                font-size: 40px;
             }
             .networking-text-column .bullet-point p {
-                font-size: 20px; /* Maintain font size */
+                font-size: 20px; 
             }
         }
 
         /* Responsive adjustments for smaller screens (e.g., mobile) */
         @media (max-width: 767px) {
             .networking-section {
-                padding: 2rem 1rem; /* Smaller padding on mobile */
+                padding: 2rem 1rem; 
             }
             .networking-container {
-                gap: 2rem; /* Smaller gap */
+                gap: 2rem; 
             }
             .qr-card-column {
-                width: 100%; /* Take full width on mobile */
-                height: auto; /* Auto height to accommodate stacked content */
-                min-height: 280px; /* Ensure a minimum height for the card */
-                max-width: none; /* Remove max-width constraint */
+                width: 100%; 
+                height: auto; 
+                min-height: 280px; 
+                max-width: none; 
             }
             .qr-content-overlay {
-                flex-direction: column; /* Stack all content inside card */
-                gap: 1.5rem; /* Gap between text-qr-group and join button */
-                justify-content: center; /* Center content vertically */
-                padding: 1rem; /* Adjust padding for mobile */
-                align-items: center; /* Center content on mobile */
+                flex-direction: column; 
+                gap: 1.5rem; 
+                justify-content: center; 
+                padding: 1rem;
+                align-items: center; 
             }
             .text-button-group {
-                align-items: center; /* Center text and button */
-                gap: 0.5rem; /* Small gap between h3 and button */
-                margin-top: 1rem; /* Add space to separate from top */
+                align-items: center;
+                gap: 0.5rem; 
+                margin-top: 1rem; 
             }
             .qr-content-overlay h3 {
-                text-align: center; /* Center text */
-                font-size: 2rem; /* Smaller font size for mobile */
+                text-align: center;
+                font-size: 2rem; 
             }
             .qr-content-overlay img.qr-code {
-                position: static; /* Remove absolute positioning on mobile */
-                margin-left: 0; /* Reset margins */
-                margin-top: 1.5rem; /* Add space above QR code when stacked */
-                width: 120px; /* Smaller QR code on mobile */
+                position: static; 
+                margin-left: 0; 
+                margin-top: 1.5rem; 
+                width: 120px;
                 height: 120px;
             }
             .join-button {
-                width: 80%; /* Make button wider on mobile */
-                max-width: 200px; /* Limit button width */
-                margin-top: 1rem; /* Space below button on mobile */
-                align-self: center; /* Center button on its own line */
+                width: 80%; 
+                max-width: 200px;
+                margin-top: 1rem; 
+                align-self: center; 
             }
             .networking-text-column h2 {
-                font-size: 32px; /* Smaller font size for mobile heading */
+                font-size: 32px; 
             }
             .networking-text-column .bullet-point {
-                flex-direction: column; /* Stack icon and text for bullet points */
-                align-items: center; /* Center stacked bullet point content */
-                text-align: center; /* Center align text */
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
             }
             .networking-text-column .bullet-point p {
-                font-size: 1rem; /* Smaller font size for mobile paragraph */
+                font-size: 1rem; 
             }
             .networking-text-column .bullet-point i {
-                margin-bottom: 0.5rem; /* Space between icon and text when stacked */
+                margin-bottom: 0.5rem; 
             }
         }
 /* <!-- Next Event section --> */
