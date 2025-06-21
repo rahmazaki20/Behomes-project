@@ -19,11 +19,14 @@
             box-sizing: border-box;
             /* overflow-x: hidden; */
             max-height: 100vh;
+            
         }
         .conference-image-column {
             flex: 1;
             min-height: 300px; 
             position: relative;
+            
+
         }
         .conference-image-column p {
             position: absolute;
@@ -32,12 +35,14 @@
             font-size: 16px;
             font-family: 400;
             display: flex;
+            
         }
 
         .conference-image-column img {
             width:100%;
             height:100%;
             border-radius: 6px;
+            
         }
         .conference-text-column {
             flex: 1; 
@@ -49,8 +54,24 @@
             text-align: left;
             box-sizing: border-box;
             margin-top: 140px;
+              position: relative; 
+              z-index: 1;
         }
+       .conference-text-column::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -70%);
+    width: 400px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(204, 157, 106, 0.3) 0%, rgba(204, 157, 106, 0) 70%);
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+    
 
+}
         .conference-text-column .date {
             font-weight: 800;
             font-size: 28px; 
@@ -155,7 +176,7 @@
         }
 /* <!-- Our top speakers --> */
 .speakers-container {
-    width: 75%;
+    width: 80%;
     margin: auto;
     padding: 2rem;
     box-sizing: border-box;
@@ -743,6 +764,14 @@
             letter-spacing: 0px;
             margin: 0;
         }
+@media (min-width: 300px) and (max-width: 768px) {
+    .qr-card-column {
+        max-width: 636px;
+        height: 450px;
+       
+    }
+}
+
 
         @media (min-width: 768px) {
             .networking-container {
@@ -785,7 +814,6 @@
             }
 
             .join-button {
-                margin-top: 0.5rem;
                 align-self: flex-start;
                 width: auto; 
                 max-width: none; 
@@ -846,7 +874,7 @@
         .map-header .arrow-image {
             width: 80px;
             height: auto;
-            margin-top: 116px;
+            margin-top: 60px;
         }
         .map-content {
             width: 100%;
@@ -884,7 +912,7 @@
             height: 100%;
             border: 0;
             display: block;
-            filter: grayscale(100%) invert(90%);
+            filter: grayscale(100%) invert(80%);
         }
 
         @media (min-width: 768px) {
@@ -921,7 +949,7 @@
                 position: absolute; 
                 width: 416px; 
                 height: 240px;
-                bottom: -150px;
+                bottom: -250px;
                 left: 450px; 
                 z-index: 2;
                 transform: none; 
