@@ -988,104 +988,99 @@
             }
         }
  /* <!-- QRCode section --> */
-         .networking-section {
-            background-color: #CC9D6A; /* Golden/Brown background for the section */
-            padding: 4rem 1.5rem; /* Ample padding */
+      .networking-section {
+            background-color: #CC9D6A;
+            padding: 4rem 1.5rem; 
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%; /* Take full width */
+            width: 100%; 
             box-sizing: border-box;
-            font-family: 'Manrope'; /* Applied font to the section as per user provided CSS */
+            font-family: 'Manrope'; 
         }
 
         .networking-container {
-            max-width: 1200px; /* Max width of content */
+            max-width: 1200px;
             width: 100%;
             display: flex;
-            flex-direction: column; /* Stack on small screens */
-            gap: 3rem; /* Space between the two main columns */
-            align-items: center; /* Center items when stacked */
+            flex-direction: column; 
+            gap: 3rem; 
+            align-items: center; 
         }
 
         .qr-card-column {
             position: relative;
             width: 100%;
-            max-width: 636px; /* Specific width of the white image */
-            height: 338px; /* Specific height of the white image */
+            max-width: 636px; 
+            height: 338px; 
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-shrink: 0; /* Prevent shrinking */
-            box-sizing: border-box; /* Include padding/border in dimensions */
+            flex-shrink: 0;
+            box-sizing: border-box; 
         }
 
         .qr-card-column .background-image {
             position: absolute;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cover the area */
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        /* Container for content inside the white card */
         .qr-content-overlay {
-            position: relative;
-            z-index: 1; /* Above the background image */
+            position: relative; 
+            z-index: 1; 
             display: flex;
-            flex-direction: column; /* Default: stack content for mobile */
-            align-items: center; /* Center horizontally */
-            justify-content: center; /* Center vertically */
-            width: 100%;
+            flex-direction: column; 
+            align-items: flex-start; 
+            justify-content: space-between; 
+            width: 90%;
+            margin: auto;
             height: 100%;
-            padding: 1rem;
+            padding: 2rem; 
             box-sizing: border-box;
-            color: #1a202c; /* Dark text color */
+            color: #1a202c; 
         }
 
-        /* Group for Behomes text and button */
         .text-button-group {
             display: flex;
             flex-direction: column; /* Stack h3 and button */
-            align-items: center; /* Center them */
+            align-items: flex-start; /* Align text and button to start */
             gap: 1rem; /* Space between h3 and button */
         }
 
-        /* Container for text-button-group and QR code */
-        .text-qr-group { /* New container for desktop side-by-side */
-            display: flex;
-            flex-direction: column; /* Stack on mobile */
-            align-items: center;
-            gap: 1.5rem; /* Gap between text-button-group and QR code on mobile */
-            margin-bottom: 1rem; /* Space before button if it's outside this group on desktop */
-        }
-
-
-        .qr-content-overlay h3 {
-            font-family: 'Manrope', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            line-height: 1.2;
-            margin: 0;
-            text-align: center;
-        }
-
+        /* QR code directly positioned for desktop */
         .qr-content-overlay img.qr-code {
+            position: absolute; /* Position absolutely */
+            top: 2rem; /* Align to the top of .qr-content-overlay (based on padding) */
+            right: 2rem; /* Align to the right of .qr-content-overlay (based on padding) */
             width: 150px; /* Adjust QR code size */
             height: 150px;
             object-fit: contain;
             margin: 0; /* Remove default margins */
+            z-index: 2; /* Ensure it's above other content if overlapping */
+        }
+
+        .qr-content-overlay h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 40px; /* Matches screenshot font size for title */
+            line-height: 1.2;
+            margin: 0;
+            text-align: left; /* Align text to left */
+            margin-bottom: 40px; /* Space between title and button */
         }
 
         .join-button {
             background-color: #CC9D6A; /* Golden button color as per user provided CSS */
             color: #ffffff; /* White text for button as per user provided CSS */
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
+            padding: 13px 20px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 16px;
             display: inline-block;
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1157,33 +1152,31 @@
             .qr-content-overlay {
                 padding: 2rem; /* More padding on desktop */
                 justify-content: space-between; /* Space out content vertically */
-            }
-
-            .text-qr-group { /* For desktop, arrange side-by-side */
-                flex-direction: row;
-                align-items: center;
-                gap: 2rem; /* Space between text/button and QR */
-                margin-bottom: 0; /* Remove bottom margin as button is within text-button-group now */
+                flex-direction: column; /* Stack text-button-group and anything else if needed */
+                align-items: flex-start; /* Align content to the left */
             }
 
             .text-button-group {
                 align-items: flex-start; /* Left align text and button */
                 gap: 0.5rem; /* Reduced gap */
+                margin-top: 0; /* Remove any default top margin */
             }
 
             .qr-content-overlay h3 {
                 text-align: left; /* Align text left */
+                font-size: 40px; /* Specific font size for desktop */
             }
 
+            /* No changes needed for qr-code on desktop as it's already absolutely positioned */
             .qr-content-overlay img.qr-code {
-                margin: 0; /* Reset margins */
+                top: 2rem; /* Consistent top padding for QR */
+                right: 2rem; /* Consistent right padding for QR */
             }
 
             .join-button {
                 margin-top: 0.5rem; /* Small margin after h3 */
                 align-self: flex-start; /* Align button to start within its group */
             }
-
 
             .networking-text-column {
                 text-align: left; /* Align text to left on larger screens */
@@ -1216,26 +1209,28 @@
                 gap: 1.5rem; /* Gap between text-qr-group and join button */
                 justify-content: center; /* Center content vertically */
                 padding: 1rem; /* Adjust padding for mobile */
-            }
-            .text-qr-group { /* On mobile, text-button-group and QR also stack */
-                flex-direction: column;
-                align-items: center;
-                gap: 1.5rem; /* Gap between text-button-group and QR */
+                align-items: center; /* Center content on mobile */
             }
             .text-button-group {
                 align-items: center; /* Center text and button */
                 gap: 0.5rem; /* Small gap between h3 and button */
+                margin-top: 1rem; /* Add space to separate from top */
             }
             .qr-content-overlay h3 {
                 text-align: center; /* Center text */
+                font-size: 2rem; /* Smaller font size for mobile */
             }
             .qr-content-overlay img.qr-code {
+                position: static; /* Remove absolute positioning on mobile */
                 margin-left: 0; /* Reset margins */
+                margin-top: 1.5rem; /* Add space above QR code when stacked */
+                width: 120px; /* Smaller QR code on mobile */
+                height: 120px;
             }
             .join-button {
                 width: 80%; /* Make button wider on mobile */
                 max-width: 200px; /* Limit button width */
-                margin-top: 0; /* Remove top margin */
+                margin-top: 1rem; /* Space below button on mobile */
                 align-self: center; /* Center button on its own line */
             }
             .networking-text-column h2 {
