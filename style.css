@@ -1009,6 +1009,7 @@
                 margin-top: 1.5rem; 
             }
         }
+
  /* <!-- parking section --> */
      .parking-section-container {
         max-width: 1296px;
@@ -1036,6 +1037,7 @@
     .video-block {
         width: 100%;
         max-width: 306px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1305,11 +1307,11 @@
             margin-bottom: 10px;
         }
         .parking-keyword-box h3 {
-            font-size: 24px;
+            font-size: 40px;
         }
 
         .cost-details p {
-            font-size: 18px;
+            font-size: 28px;
         }
 
         .car-icon {
@@ -1378,14 +1380,14 @@
             margin-bottom: 8px;
         }
         .parking-keyword-box h3 {
-            font-size: 1.5rem;
+            font-size: 40px;
         }
 
         .cost-details {
             background-color: transparent;
         }
         .cost-details p {
-            font-size: 1rem;
+            font-size: 28px;
         }
 
         .car-icon {
