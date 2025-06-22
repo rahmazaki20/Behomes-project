@@ -438,10 +438,11 @@
 /* <!-- Agenda section --> */
 
 .container-agenda {
-    width: 63%;
+    width: 70%;
     display: flex;
     margin: 0 auto;
     padding: 40px 20px;
+    margin-bottom: 30px;
 }
 
 .sidebar {
@@ -471,40 +472,49 @@
 }
 
 .agenda {
-    width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-top: 100px;
+    /* gap: 30px; */
+    margin: 0;
+    padding: 0;
 }
-
+.sidebar{
+    margin-top: -70px;
+}
 .item {
     display: flex;
     gap: 20px;
 }
 
 .item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #2c2f45;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-block: 30px; 
+  border-bottom: 1px solid #2c2f45;
 }
 
 .item:last-child {
     border-bottom: none;
 }
 
-.time {
-    min-width: 150px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #cfcfcf;
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2c2f45;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
 }
 
 .content h3 {
-    margin: 0 0 10px;
+    margin: 0;
     font-size: 16px;
 }
 
@@ -512,21 +522,25 @@
     font-size: 14px;
     line-height: 1.5;
     color: #cfcfcf;
-    margin-bottom: 15px;
+     margin: 0;
 }
 
-.speakers {
+/* .speakers {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+} */
+.speakers {
+ display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .speaker,
 .speakers .speaker {
-    display: flex;
+ display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 10px;
 }
 
 .speaker img {
@@ -884,6 +898,14 @@
             align-items: center; 
             position: relative; 
         }
+        .map-pin {
+  position: absolute;
+  top: 50%; /* adjust this to position vertically */
+  left: 50%; /* adjust this to position horizontally */
+  transform: translate(-50%, -100%); /* center above point */
+  z-index: 3;
+  pointer-events: none;
+}
         .map-content img {
             width: 100%;
             max-width: 952px;
@@ -913,6 +935,7 @@
             border: 0;
             display: block;
             filter: grayscale(100%) invert(80%);
+            position: relative;
         }
 
         @media (min-width: 768px) {
