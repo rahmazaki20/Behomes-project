@@ -14,12 +14,10 @@
             width: 100%;
             overflow: hidden;
             color: #ffffff;
-            /* line-height: 1.6; */
             margin-bottom: 80px;
             box-sizing: border-box;
-            /* overflow-x: hidden; */
-            max-height: 100vh;
-            
+            max-height: 100vh;    
+             
         }
         .conference-image-column {
             flex: 1;
@@ -46,7 +44,7 @@
         }
         .conference-text-column {
             flex: 1; 
-            padding: 2rem; 
+            padding: 65px; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -54,23 +52,25 @@
             text-align: left;
             box-sizing: border-box;
             margin-top: 140px;
-              position: relative; 
-              z-index: 1;
+            position: relative; 
+            z-index: 1;
+              
         }
        .conference-text-column::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-60%, -70%);
-    width: 400px;
-    height: 600px;
-    background: radial-gradient(ellipse at center, rgba(204, 157, 106, 0.3) 0%, rgba(204, 157, 106, 0) 70%);
-    filter: blur(60px);
-    z-index: -1;
-    pointer-events: none;
-    
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* transform: translate(-40%, -70%); */
+            width: 400px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(204, 157, 106, 0.3) 0%, rgba(204, 157, 106, 0) 70%);
+            /* transform: rotate(45deg);  */
+            transform: translate(-40%, -70%) rotate(45deg);
 
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
 }
         .conference-text-column .date {
             font-weight: 800;
