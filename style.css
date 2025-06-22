@@ -61,13 +61,10 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            /* transform: translate(-40%, -70%); */
             width: 400px;
             height: 600px;
             background: radial-gradient(ellipse at center, rgba(204, 157, 106, 0.3) 0%, rgba(204, 157, 106, 0) 70%);
-            /* transform: rotate(45deg);  */
             transform: translate(-40%, -70%) rotate(45deg);
-
             filter: blur(60px);
             z-index: -1;
             pointer-events: none;
@@ -474,7 +471,6 @@
 .agenda {
     display: flex;
     flex-direction: column;
-    /* gap: 30px; */
     margin: 0;
     padding: 0;
 }
@@ -524,12 +520,6 @@
     color: #cfcfcf;
      margin: 0;
 }
-
-/* .speakers {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} */
 .speakers {
  display: flex;
     flex-direction: column;
@@ -659,7 +649,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
-            /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
         }
 
         .qr-content-overlay {
@@ -900,9 +889,9 @@
         }
         .map-pin {
   position: absolute;
-  top: 50%; /* adjust this to position vertically */
-  left: 50%; /* adjust this to position horizontally */
-  transform: translate(-50%, -100%); /* center above point */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -100%); 
   z-index: 3;
   pointer-events: none;
 }
@@ -1023,7 +1012,7 @@
  /* <!-- parking section --> */
          .parking-section-container {
             max-width: 1296px;
-            margin: auto;
+            margin:  0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
@@ -1033,34 +1022,24 @@
 
         .parking-content-wrapper {
             display: flex;
-            flex-direction: column; 
             width: 100%;
             gap: 2rem;
             border-radius: 8px;
             padding: 2rem;
-            box-sizing: border-box;
             margin-top: 180px;
             align-items: center;
             overflow: hidden; 
-        }
-
-        .video-block {
-            width: 100%;
-            max-width: 306px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            flex-wrap: wrap;
         }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: calc(634 / 306 * 100%);
-            height: 0; 
+            padding-bottom: calc(634 / 350 * 100%);
             width: 100%;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         
         }
 
         .video-wrapper video {
@@ -1096,26 +1075,28 @@
             justify-content: center;
             text-align: left;
         }
+.video-block {
+  max-width: 306px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-        .image-text-block {
-            width: 100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+.image-text-block {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
 
         .image-text-block img {
             width: 100%;
-            height: auto;
-            object-fit: cover;
             border-radius: 8px;
-            display: block;
         }
 
-        /* No .image-text-overlay styling as the div is removed in HTML */
+       
 
         .parking-keyword-box {
             background-color: rgba(45, 55, 72, 0.8);
@@ -1172,112 +1153,138 @@
             color: #d6a25b;
             font-weight: 800;
         }
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    pointer-events: none; 
+    z-index: 2;
+}
 
-        @media (min-width: 768px) {
-            .parking-content-wrapper {
-                width: 1296px; 
-                height: 634px;
-                gap: 40px; 
-                flex-direction: row; 
-                justify-content: center;
-                align-items: flex-start;
-                padding: 2rem;
-            }
+.text-overlay .parking-keyword-box,
+.text-overlay .cost-details {
+    pointer-events: auto; 
+}
+@media (max-width: 1024px) {
+  .parking-content-wrapper {
+    flex-direction: column;
+  align-items: center;
+    gap: 2rem;
+  }
 
-            .video-block {
-                width: 306px; 
-                height: 100%; 
-            }
-            .video-wrapper {
-                padding-bottom: 0; 
-                height: 100%; 
-            }
+  .cost-details {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    align-items: center;
+  }
 
-            .image-text-block {
-                width: 950px;
-                height: 100%; 
-                flex-shrink: 0;
-                position: relative;
-            }
-            .image-text-block img {
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-            .parking-keyword-box {
-                position: absolute;
-                top: 49.7px;
-                left: 55px;
-            }
-            .cost-details {
-                position: absolute;
-                top: 49.7px;
-                left: 328px;
-            }
-        }
+  .cost-details p {
+    font-size: 24px;
+    text-align: center;
+  }
 
-        @media (max-width: 767px) {
-            .parking-section-container {
-                margin: 40px auto;
-                padding: 1rem;
-                min-height: auto;
-            }
-            .video-caption {
-                width: 100%;
-                height: auto;
-                font-size: 0.9rem;
-                text-align: center;
-            }
-            
-            .image-text-block {
-                height: 400px;
-                overflow: hidden;
-                display: flex; 
-                flex-direction: column; 
-                justify-content: center;
-                align-items: center;
-                padding: 1rem; 
-                box-sizing: border-box;
-            }
-            .image-text-block img {
-                height: 100%;
-                width: auto;
-            }
-            
-            .parking-keyword-box, .cost-details {
-                position: static; 
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-                margin: 0 auto 1rem auto;
-                text-align: center;
-                align-items: center;
-            }
-            .parking-keyword-box h3, .cost-details p {
-                font-size: 1.5rem;
-            }
-        }
+  .parking-keyword-box {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
 
-        @media (max-width: 500px) {
-            .parking-section-container {
-                margin: 40px auto;
-                padding: 1rem;
-                min-height: auto;
-            }
-            .video-caption {
-                font-size: 0.8rem;
-            }
-            .parking-keyword-box h3 {
-                font-size: 1.2rem;
-            }
-            .cost-details p {
-                font-size: 1rem;
-            }
-        }
- 
+  .parking-keyword-box h3 {
+    font-size: 32px;
+  }
+
+  .video-block,
+  .image-text-block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .image-text-block img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-caption {
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .cost-details p {
+    font-size: 20px;
+  }
+
+  .parking-keyword-box h3 {
+    font-size: 28px;
+  }
+
+  .play-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 768px) {
+    .text-overlay {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .parking-keyword-box,
+    .cost-details {
+        position: static !important;
+        background-color: transparent;
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-bottom: 1rem;
+        width: 90%;
+    }
+
+    .cost-details p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .parking-keyword-box h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+  .cost-details p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .parking-keyword-box {
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+
+  .parking-keyword-box h3 {
+    font-size: 24px;
+  }
+}
+
 /* <!-- Next Event section --> */
         .containe-events {
             width: 100%;
@@ -1293,7 +1300,7 @@
             font-weight: 600;
             color: #ffffff;
             text-align: center;
-            /* margin-top: 112px; */
+   
         }
 
         .grid-container {
@@ -1339,7 +1346,6 @@
             background-color: white;
             border-radius: 100px;
             padding: 0.5px;
-            /* font-size: 1.25rem; */
             display: flex;
             align-items: center;
             justify-content: center;
