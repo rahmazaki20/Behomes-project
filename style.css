@@ -1357,15 +1357,18 @@
             padding: 1rem;
             background-color: #272D42; 
             margin: 0;
+            border-radius: 0  0 8px 8px;
         }
 
         .card-meta {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            
-            
+            align-items: center;   
         }
+      .card-meta > span + span {
+    color: #999;
+}
+
         .card-title {
             font-size: 13px;
             color: #ffffff;
@@ -1385,11 +1388,11 @@
 
  
         .divider {
-    width: calc(100% - 48px); /* 24px left + 24px right */
-    margin: 20px 24px 0 24px;  /* top: 20px gap above button, left/right: 24px */
-    opacity: 0.15;
-    border: none;
-    border-top: 1px solid #ffffff; /* or your desired color */
+            width: calc(100% - 48px);
+            margin: 20px 24px 0 24px;  
+            opacity: 0.15;
+            border: none;
+            border-top: 1px solid #ffffff; 
 }
 
 
