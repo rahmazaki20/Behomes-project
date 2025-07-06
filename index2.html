@@ -1,89 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Behomes Networking Events</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css">
-    
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="image-section">
-            <img src="./images/17.png" alt="People presenting">
+      <div class="image-section">
+        <img src="./images/17.png" alt="People presenting" />
+      </div>
+      <div class="content-section">
+        <p class="power-business">Power your business</p>
+        <h1 class="main-title">Networking Events<br />by Behomes</h1>
+        <p class="description">
+          Welcome to the Behomes Events page — a space where real estate brokers
+          and agents across the UAE connect, learn, and grow together.
+        </p>
+        <p class="description">
+          Join us for upcoming sessions featuring expert lectures, panel
+          discussions, and casual networking with like-minded professionals.
+          Whether you're here to stay updated on market trends, sharpen your
+          skills, or expand your circle — you're in the right place.
+        </p>
+        <div class="buttons">
+          <button class="btn primary-btn">Get started</button>
+          <button class="btn secondary-btn">Who we are &rarr;</button>
         </div>
-        <div class="content-section">
-            <p class="power-business">Power your business</p>
-            <h1 class="main-title">Networking Events<br>by Behomes</h1>
-            <p class="description">
-                Welcome to the Behomes Events page — a space where real estate brokers and agents across the UAE connect, learn,
-                and grow together.
-            </p>
-            <p class="description">
-                Join us for upcoming sessions featuring expert lectures, panel discussions, and casual networking with like-minded professionals. Whether you're here to stay updated on market trends, sharpen your skills, or expand your circle — you're in the right place.
-            </p>
-            <div class="buttons">
-                <button class="btn primary-btn">Get started</button>
-                <button class="btn secondary-btn">Who we are &rarr;</button>
-            </div>
-        </div>
+      </div>
     </div>
-   
 
+    <!-- Browse Events section -->
+    <section class="browse-events-section">
+      <div class="browse-events-header">
+        <div class="filters">
+          <div class="dropdown-wrapper">
+            <select class="dropdown-select">
+              <option value="">All Topics</option>
+              <!-- JS will populate options -->
+            </select>
+            <svg width="14" height="8" viewBox="0 0 14 8">
+              <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+            </svg>
+          </div>
 
+          <div class="dropdown-wrapper">
+            <select class="dropdown-select">
+              <option value="">All Formats</option>
+              <option value="online">Online</option>
+              <option value="offline">Offline</option>
+            </select>
+            <svg width="14" height="8" viewBox="0 0 14 8">
+              <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+            </svg>
+          </div>
 
-
-       <section class="what-to-expect-section">
-        <h2 class="section-title">What to Expect?</h2>
-        <div class="feature-cards-container">
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.5">
-                            <path d="M24 4C12.972 4 4 12.972 4 24C4 35.028 12.972 44 24 44C35.028 44 44 35.028 44 24C44 12.972 35.028 4 24 4ZM24 40C15.178 40 8 32.822 8 24C8 15.178 15.178 8 24 8C32.822 8 40 15.178 40 24C40 32.822 32.822 40 24 40Z" fill="white"/>
-                            <path d="M29.6568 29.6559C29.2888 30.0239 28.8908 30.3519 28.4748 30.6339C28.0448 30.9239 27.5868 31.1719 27.1168 31.3699C26.6268 31.5759 26.1228 31.7339 25.6168 31.8359C24.5548 32.0499 23.4428 32.0499 22.3848 31.8359C21.8768 31.7319 21.3728 31.5739 20.8868 31.3719C20.4148 31.1699 19.9548 30.9219 19.5288 30.6359C19.1088 30.3499 18.7108 30.0219 18.3408 29.6519C17.9768 29.2919 17.6488 28.8939 17.3648 28.4719L14.0488 30.7059C14.4788 31.3439 14.9728 31.9439 15.5148 32.4839C16.0588 33.0299 16.6568 33.5239 17.2908 33.9499C17.9308 34.3839 18.6168 34.7539 19.3328 35.0579C20.0648 35.3639 20.8208 35.5999 21.5868 35.7559C22.3788 35.9179 23.1928 35.9999 24.0008 35.9999C24.8088 35.9999 25.6228 35.9179 26.4168 35.7559C27.1808 35.6019 27.9368 35.3659 28.6728 35.0559C29.3828 34.7559 30.0688 34.3839 30.7148 33.9479C31.3428 33.5219 31.9408 33.0299 32.4848 32.4879C33.0288 31.9459 33.5248 31.3459 33.9528 30.7059L30.6368 28.4719C30.3508 28.8939 30.0228 29.2919 29.6568 29.6559Z" fill="white"/>
-                            <path d="M17 24C18.6569 24 20 22.6569 20 21C20 19.3431 18.6569 18 17 18C15.3431 18 14 19.3431 14 21C14 22.6569 15.3431 24 17 24Z" fill="white"/>
-                            <path d="M31 20C27 20 26 24 26 24H36C36 24 34.998 20 31 20Z" fill="white"/>
-                        </g>
-                    </svg>
-                </div>
-                <h3>Expert Talks</h3>
-                <p>Learn from top professionals in real estate, marketing, tech and law</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25.059 14.7037C23.9141 15.5199 22.5131 16 21 16C17.134 16 14 12.866 14 9C14 5.13401 17.134 2 21 2C23.506 2 25.7044 3.31683 26.941 5.29628M10 38.1743H15.2206C15.9013 38.1743 16.5778 38.2553 17.2376 38.4173L22.7538 39.7578C23.9507 40.0493 25.1976 40.0777 26.4069 39.8428L32.5059 38.6562C34.1171 38.3424 35.5992 37.5709 36.7607 36.441L41.0758 32.2434C42.3081 31.0467 42.3081 29.1049 41.0758 27.9061C39.9663 26.8269 38.2095 26.7054 36.9543 27.6206L31.9252 31.2897C31.205 31.8162 30.3286 32.0997 29.4273 32.0997H24.571L27.6621 32.0995C29.4044 32.0995 30.8157 30.7267 30.8157 29.0318V28.4183C30.8157 27.011 29.8311 25.7839 28.4282 25.4437L23.6572 24.2835C22.8808 24.0952 22.0856 24 21.2863 24C19.3567 24 15.8638 25.5976 15.8638 25.5976L10 28.0498M38 11C38 14.866 34.866 18 31 18C27.134 18 24 14.866 24 11C24 7.13401 27.134 4 31 4C34.866 4 38 7.13401 38 11ZM2 27.2L2 38.8C2 39.9201 2 40.4802 2.21799 40.908C2.40973 41.2843 2.71569 41.5903 3.09202 41.782C3.51984 42 4.07989 42 5.2 42H6.8C7.9201 42 8.48016 42 8.90798 41.782C9.28430 41.5903 9.59027 41.2843 9.78201 40.908C10 40.4802 10 39.9201 10 38.8V27.2C10 26.0799 10 25.5198 9.78201 25.092C9.59027 24.7157 9.28431 24.4097 8.90798 24.218C8.48016 24 7.92011 24 6.8 24L5.2 24C4.0799 24 3.51984 24 3.09202 24.218C2.71570 24.4097 2.40973 24.7157 2.21799 25.092C2 25.5198 2 26.0799 2 27.2Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h3>Live Networking</h3>
-                <p>Meet new partners, exchange insights, and build strong industry connections</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 19.1301C2 17.9814 2 17.407 2.14805 16.8781C2.2792 16.4096 2.49473 15.9689 2.78405 15.5777C3.11067 15.1361 3.56404 14.7835 4.47078 14.0782L18.0354 3.528C18.738 2.98149 19.0894 2.70824 19.4773 2.6032C19.8196 2.51052 20.1804 2.51052 20.5227 2.6032C20.9106 2.70824 21.262 2.98149 21.9646 3.528L35.5292 14.0783C36.436 14.7835 36.8893 15.1361 37.2159 15.5777C37.5053 15.9689 37.7208 16.4096 37.8519 16.8781C38 17.407 38 17.9814 38 19.1301V33.6C38 35.8402 38 36.9603 37.564 37.8159C37.1805 38.5686 36.5686 39.1805 35.816 39.564C34.9603 40 33.8402 40 31.6 40H8.4C6.15979 40 5.03968 40 4.18404 39.564C3.43139 39.1805 2.81947 38.5686 2.43597 37.8159C2 36.9603 2 35.8402 2 33.6V19.1301Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h3>Local Focus</h3>
-                <p>Topics and discussions tailored to the UAE real estate market</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 19.1301C2 17.9814 2 17.407 2.14805 16.8781C2.2792 16.4096 2.49473 15.9689 2.78405 15.5777C3.11067 15.1361 3.56404 14.7835 4.47078 14.0782L18.0354 3.528C18.738 2.98149 19.0894 2.70824 19.4773 2.6032C19.8196 2.51052 20.1804 2.51052 20.5227 2.6032C20.9106 2.70824 21.262 2.98149 21.9646 3.528L35.5292 14.0783C36.436 14.7835 36.8893 15.1361 37.2159 15.5777C37.5053 15.9689 37.7208 16.4096 37.8519 16.8781C38 17.407 38 17.9814 38 19.1301V33.6C38 35.8402 38 36.9603 37.564 37.8159C37.1805 38.5686 36.5686 39.1805 35.816 39.564C34.9603 40 33.8402 40 31.6 40H8.4C6.15979 40 5.03968 40 4.18404 39.564C3.43139 39.1805 2.81947 38.5686 2.43597 37.8159C2 36.9603 2 35.8402 2 33.6V19.1301Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h3>Interactive Sessions</h3>
-                <p>Ask questions, join discussions, and get real answers from industry pros</p>
-            </div>
+          <button class="reset-button">Reset</button>
         </div>
-        <a href="#" class="signup-button">Sign up for Updates</a>
+      </div>
+
+      <div class="browse-events-content">
+        <div class="calendar-section">
+          <div class="calendar-header">
+            <h3>April 2025</h3>
+            <div class="calendar-nav">
+              <div class="nav-arrow">&#8249;</div>
+              <div class="nav-arrow">&#8250;</div>
+            </div>
+          </div>
+
+          <div class="calendar-grid" id="calendar-grid">
+            <!-- JS will inject dates here -->
+          </div>
+
+          <div class="event-type-legend">
+            <div class="legend-item">
+              <span class="dot online"></span>Online
+            </div>
+            <div class="legend-item">
+              <span class="dot offline"></span>Offline
+            </div>
+          </div>
+        </div>
+
+        <div class="event-image-placeholder">
+          <img src="images/18.jpg" alt="Event preview" />
+        </div>
+      </div>
     </section>
 
-</body>
+
+    
+    <!-- What to Expect section -->
+    <section class="what-to-expect-section">
+      <h2 class="section-title">What to Expect?</h2>
+      <div class="feature-cards-container">
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.5">
+                <path
+                  d="M24 4C12.972 4 4 12.972 4 24C4 35.028 12.972 44 24 44C35.028 44 44 35.028 44 24C44 12.972 35.028 4 24 4ZM24 40C15.178 40 8 32.822 8 24C8 15.178 15.178 8 24 8C32.822 8 40 15.178 40 24C40 32.822 32.822 40 24 40Z"
+                  fill="white"
+                />
+                <path
+                  d="M29.6568 29.6559C29.2888 30.0239 28.8908 30.3519 28.4748 30.6339C28.0448 30.9239 27.5868 31.1719 27.1168 31.3699C26.6268 31.5759 26.1228 31.7339 25.6168 31.8359C24.5548 32.0499 23.4428 32.0499 22.3848 31.8359C21.8768 31.7319 21.3728 31.5739 20.8868 31.3719C20.4148 31.1699 19.9548 30.9219 19.5288 30.6359C19.1088 30.3499 18.7108 30.0219 18.3408 29.6519C17.9768 29.2919 17.6488 28.8939 17.3648 28.4719L14.0488 30.7059C14.4788 31.3439 14.9728 31.9439 15.5148 32.4839C16.0588 33.0299 16.6568 33.5239 17.2908 33.9499C17.9308 34.3839 18.6168 34.7539 19.3328 35.0579C20.0648 35.3639 20.8208 35.5999 21.5868 35.7559C22.3788 35.9179 23.1928 35.9999 24.0008 35.9999C24.8088 35.9999 25.6228 35.9179 26.4168 35.7559C27.1808 35.6019 27.9368 35.3659 28.6728 35.0559C29.3828 34.7559 30.0688 34.3839 30.7148 33.9479C31.3428 33.5219 31.9408 33.0299 32.4848 32.4879C33.0288 31.9459 33.5248 31.3459 33.9528 30.7059L30.6368 28.4719C30.3508 28.8939 30.0228 29.2919 29.6568 29.6559Z"
+                  fill="white"
+                />
+                <path
+                  d="M17 24C18.6569 24 20 22.6569 20 21C20 19.3431 18.6569 18 17 18C15.3431 18 14 19.3431 14 21C14 22.6569 15.3431 24 17 24Z"
+                  fill="white"
+                />
+                <path
+                  d="M31 20C27 20 26 24 26 24H36C36 24 34.998 20 31 20Z"
+                  fill="white"
+                />
+              </g>
+            </svg>
+          </div>
+          <h3>Expert Talks</h3>
+          <p>
+            Learn from top professionals in real estate, marketing, tech and law
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.059 14.7037C23.9141 15.5199 22.5131 16 21 16C17.134 16 14 12.866 14 9C14 5.13401 17.134 2 21 2C23.506 2 25.7044 3.31683 26.941 5.29628M10 38.1743H15.2206C15.9013 38.1743 16.5778 38.2553 17.2376 38.4173L22.7538 39.7578C23.9507 40.0493 25.1976 40.0777 26.4069 39.8428L32.5059 38.6562C34.1171 38.3424 35.5992 37.5709 36.7607 36.441L41.0758 32.2434C42.3081 31.0467 42.3081 29.1049 41.0758 27.9061C39.9663 26.8269 38.2095 26.7054 36.9543 27.6206L31.9252 31.2897C31.205 31.8162 30.3286 32.0997 29.4273 32.0997H24.571L27.6621 32.0995C29.4044 32.0995 30.8157 30.7267 30.8157 29.0318V28.4183C30.8157 27.011 29.8311 25.7839 28.4282 25.4437L23.6572 24.2835C22.8808 24.0952 22.0856 24 21.2863 24C19.3567 24 15.8638 25.5976 15.8638 25.5976L10 28.0498M38 11C38 14.866 34.866 18 31 18C27.134 18 24 14.866 24 11C24 7.13401 27.134 4 31 4C34.866 4 38 7.13401 38 11ZM2 27.2L2 38.8C2 39.9201 2 40.4802 2.21799 40.908C2.40973 41.2843 2.71569 41.5903 3.09202 41.782C3.51984 42 4.07989 42 5.2 42H6.8C7.9201 42 8.48016 42 8.90798 41.782C9.28430 41.5903 9.59027 41.2843 9.78201 40.908C10 40.4802 10 39.9201 10 38.8V27.2C10 26.0799 10 25.5198 9.78201 25.092C9.59027 24.7157 9.28431 24.4097 8.90798 24.218C8.48016 24 7.92011 24 6.8 24L5.2 24C4.0799 24 3.51984 24 3.09202 24.218C2.71570 24.4097 2.40973 24.7157 2.21799 25.092C2 25.5198 2 26.0799 2 27.2Z"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h3>Live Networking</h3>
+          <p>
+            Meet new partners, exchange insights, and build strong industry
+            connections
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <svg
+              width="40"
+              height="42"
+              viewBox="0 0 40 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 19.1301C2 17.9814 2 17.407 2.14805 16.8781C2.2792 16.4096 2.49473 15.9689 2.78405 15.5777C3.11067 15.1361 3.56404 14.7835 4.47078 14.0782L18.0354 3.528C18.738 2.98149 19.0894 2.70824 19.4773 2.6032C19.8196 2.51052 20.1804 2.51052 20.5227 2.6032C20.9106 2.70824 21.262 2.98149 21.9646 3.528L35.5292 14.0783C36.436 14.7835 36.8893 15.1361 37.2159 15.5777C37.5053 15.9689 37.7208 16.4096 37.8519 16.8781C38 17.407 38 17.9814 38 19.1301V33.6C38 35.8402 38 36.9603 37.564 37.8159C37.1805 38.5686 36.5686 39.1805 35.816 39.564C34.9603 40 33.8402 40 31.6 40H8.4C6.15979 40 5.03968 40 4.18404 39.564C3.43139 39.1805 2.81947 38.5686 2.43597 37.8159C2 36.9603 2 35.8402 2 33.6V19.1301Z"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h3>Local Focus</h3>
+          <p>Topics and discussions tailored to the UAE real estate market</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-wrapper">
+            <svg
+              width="40"
+              height="42"
+              viewBox="0 0 40 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 19.1301C2 17.9814 2 17.407 2.14805 16.8781C2.2792 16.4096 2.49473 15.9689 2.78405 15.5777C3.11067 15.1361 3.56404 14.7835 4.47078 14.0782L18.0354 3.528C18.738 2.98149 19.0894 2.70824 19.4773 2.6032C19.8196 2.51052 20.1804 2.51052 20.5227 2.6032C20.9106 2.70824 21.262 2.98149 21.9646 3.528L35.5292 14.0783C36.436 14.7835 36.8893 15.1361 37.2159 15.5777C37.5053 15.9689 37.7208 16.4096 37.8519 16.8781C38 17.407 38 17.9814 38 19.1301V33.6C38 35.8402 38 36.9603 37.564 37.8159C37.1805 38.5686 36.5686 39.1805 35.816 39.564C34.9603 40 33.8402 40 31.6 40H8.4C6.15979 40 5.03968 40 4.18404 39.564C3.43139 39.1805 2.81947 38.5686 2.43597 37.8159C2 36.9603 2 35.8402 2 33.6V19.1301Z"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h3>Interactive Sessions</h3>
+          <p>
+            Ask questions, join discussions, and get real answers from industry
+            pros
+          </p>
+        </div>
+      </div>
+      <a href="#" class="signup-button">Sign up for Updates</a>
+    </section>
+
+    <!-- Next Event section -->
+    <div class="containe-events">
+      <h2 class="section-heading">Next Events</h2>
+      <div class="grid-container">
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <img src="./images/8.jpg" alt="Conference" />
+          <div class="card-icon">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 0.178711H1.5C0.67275 0.178711 0 0.851461 0 1.67871V5.63571V6.17871V15.1787L6 11.7497L12 15.1787V6.17871V5.63571V1.67871C12 0.851461 11.3273 0.178711 10.5 0.178711ZM10.5 12.5935L6 10.0225L1.5 12.5935V6.17871V5.63571V1.67871H10.5V5.63571V6.17871V12.5935Z"
+                fill="#011E60"
+              />
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="tag-label">Conference</span>
+              <span>March 30, 2025</span>
+            </div>
+            <h3 class="card-title">
+              5 Bad Landing Page Examples & How We Would Fix Them
+            </h3>
+            <hr class="divider" />
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <img src="./images/9.jpg" alt="Open space" />
+          <div class="card-icon">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 0.178711H1.5C0.67275 0.178711 0 0.851461 0 1.67871V5.63571V6.17871V15.1787L6 11.7497L12 15.1787V6.17871V5.63571V1.67871C12 0.851461 11.3273 0.178711 10.5 0.178711ZM10.5 12.5935L6 10.0225L1.5 12.5935V6.17871V5.63571V1.67871H10.5V5.63571V6.17871V12.5935Z"
+                fill="#011E60"
+              />
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="tag-label">Open space</span>
+              <span>Apr 5, 2025</span>
+            </div>
+            <h3 class="card-title">
+              Why UX Design Matters and How it Affects Ranking
+            </h3>
+            <hr class="divider" />
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <img src="./images/10.png" alt="Business" />
+          <div class="card-icon">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 0.178711H1.5C0.67275 0.178711 0 0.851461 0 1.67871V5.63571V6.17871V15.1787L6 11.7497L12 15.1787V6.17871V5.63571V1.67871C12 0.851461 11.3273 0.178711 10.5 0.178711ZM10.5 12.5935L6 10.0225L1.5 12.5935V6.17871V5.63571V1.67871H10.5V5.63571V6.17871V12.5935Z"
+                fill="#011E60"
+              />
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="tag-label">Business</span>
+              <span>March 18, 2025</span>
+            </div>
+            <h3 class="card-title">
+              This Week in Search: New Limits and Exciting Features
+            </h3>
+            <hr class="divider" />
+          </div>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="event-card">
+          <img src="./images/11.png" alt="Marketing" />
+          <div class="card-icon">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5 0.178711H1.5C0.67275 0.178711 0 0.851461 0 1.67871V5.63571V6.17871V15.1787L6 11.7497L12 15.1787V6.17871V5.63571V1.67871C12 0.851461 11.3273 0.178711 10.5 0.178711ZM10.5 12.5935L6 10.0225L1.5 12.5935V6.17871V5.63571V1.67871H10.5V5.63571V6.17871V12.5935Z"
+                fill="#011E60"
+              />
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="tag-label">Marketing</span>
+              <span>Apr 2, 2025</span>
+            </div>
+            <h3 class="card-title">
+              How Agile is Your Forecasting <br />
+              Process?
+            </h3>
+            <hr class="divider" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Us section -->
+    <section class="change-game-section">
+      <div class="change-game-header">
+        <h2>Let's Change the Game Together</h2>
+        <p>
+          Want to stay updated on upcoming events, join the conversation, or
+          even take the stage?
+        </p>
+      </div>
+      <form class="change-game-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" placeholder="" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email-address">Email address</label>
+            <input type="email" id="email-address" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <div class="custom-select-wrapper">
+              <select id="city" class="custom-select">
+                <option value="">Choose the city</option>
+                <option value="cairo">Cairo</option>
+                <option value="alexandria">Alexandria</option>
+                <option value="giza">Giza</option>
+              </select>
+              <svg
+                class="select-arrow"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interested-in">Your interested in:</label>
+            <div class="custom-select-wrapper">
+              <select id="interested-in" class="custom-select">
+                <option value="">Owner</option>
+                <option value="speaker">Become a speaker</option>
+                <option value="chat">Join chat</option>
+                <option value="telegram">Join Telegram</option>
+              </select>
+              <svg
+                class="select-arrow"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="send-request-button">Send request</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
