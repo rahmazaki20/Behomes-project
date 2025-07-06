@@ -13,3 +13,15 @@
     document.body.style.overflow = ''; // re-enable scroll
   }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const playIcon = document.querySelector(".play-icon");
+
+    if (playIcon) {
+      playIcon.addEventListener("click", () => {
+        playIcon.style.opacity = "0";
+        setTimeout(() => {
+          playIcon.style.display = "none";
+        }, 300); // match the CSS transition
+      });
+    }
+  });
