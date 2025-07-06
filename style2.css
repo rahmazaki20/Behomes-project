@@ -404,11 +404,11 @@ body {
 }
 
 .legend-item .online {
-    background-color: #CC9D6A;
+    background-color: #31C48D;
 }
 
 .legend-item .offline {
-    background-color: #666F8F;
+    background-color: #F56565;
 }
 
 .event-image-placeholder {
