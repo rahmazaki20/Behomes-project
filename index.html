@@ -327,6 +327,54 @@
             <a href="#" class="start-button">Start: Right Now</a>
         </div>
     </div>
-</body>
 
+
+
+
+<!-- Contact Us Popup -->
+<div id="contact-popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+
+    <!-- Contact Us form placed inside the popup -->
+    <section class="change-game-section">
+      <div class="change-game-header">
+        <h2>Let's Change the Game Together</h2>
+        <p>
+          Want to stay updated on upcoming events, join the conversation, or
+          even take the stage?
+        </p>
+      </div>
+      <form class="change-game-form">
+           <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" placeholder="" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email-address">Email address</label>
+            <input type="email" id="email-address" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="" />
+          </div>
+        </div>
+
+        <button type="submit" class="send-request-button">Send request</button>
+      </form>
+    </section>
+
+  </div>
+</div>
+
+
+</body>
+<script src="./script.js"></script>
 </html>
