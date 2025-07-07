@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <div class="container">
+    <section class="events-body-container">
+    <div class="events-container">
       <div class="image-section">
         <img src="./images/17.png" alt="People presenting" />
       </div>
@@ -36,65 +37,64 @@
     </div>
 
     <!-- Browse Events section -->
-    <section class="browse-events-section">
-      <div class="browse-events-header">
-        <div class="filters">
-          <div class="dropdown-wrapper">
-            <select class="dropdown-select">
-              <option value="">Event topic</option>
-              <!-- JS will populate options -->
-            </select>
-            <svg width="14" height="8" viewBox="0 0 14 8">
-              <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
-            </svg>
-          </div>
+   
+<section class="browse-events-section">
+  <div class="browse-events-header">
+    <div class="filters">
+      <div class="dropdown-wrapper event-topic-dropdown">
+        <select class="dropdown-select">
+          <option value="">Event topic</option>
+        </select>
+        <svg width="14" height="8" viewBox="0 0 14 8">
+          <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+        </svg>
+      </div>
 
-          <div class="dropdown-wrapper">
-            <select class="dropdown-select">
-              <option value="">Formats</option>
-              <option value="online">Online</option>
-              <option value="offline">Offline</option>
-            </select>
-            <svg width="14" height="8" viewBox="0 0 14 8">
-              <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
-            </svg>
-          </div>
+      <div class="format-reset-wrapper">
+        <div class="dropdown-wrapper format-dropdown">
+          <select class="dropdown-select">
+            <option value="">Formats</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+          <svg width="14" height="8" viewBox="0 0 14 8">
+            <path d="M1 1L7 7L13 1" stroke="#666F8F" stroke-width="2" />
+          </svg>
+        </div>
 
-          <button class="reset-button">Reset the filter</button>
+        <button class="reset-button">Reset the filter</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="browse-events-content">
+    <div class="calendar-section">
+      <div class="calendar-header">
+        <h3></h3>
+        <div class="calendar-nav">
+          <div class="nav-arrow">&#8249;</div>
+          <div class="nav-arrow">&#8250;</div>
         </div>
       </div>
 
-      <div class="browse-events-content">
-        <div class="calendar-section">
-          <div class="calendar-header">
-            <h3></h3>
-            <!-- JS will fill this in -->
-            <div class="calendar-nav">
-              <div class="nav-arrow">&#8249;</div>
-              <div class="nav-arrow">&#8250;</div>
-            </div>
-          </div>
+      <div class="calendar-grid" id="calendar-grid">
+      </div>
 
-          <div class="calendar-grid" id="calendar-grid">
-            <!-- JS will inject dates here -->
-          </div>
-
-          <div class="event-type-legend">
-            <div class="legend-item">
-              <span class="dot online"></span>Online
-            </div>
-            <div class="legend-item">
-              <span class="dot offline"></span>Offline
-            </div>
-          </div>
+      <div class="event-type-legend">
+        <div class="legend-item">
+          <span class="dot online"></span>Online
         </div>
-
-        <div class="event-image-placeholder">
-          <img src="images/18.jpg" alt="Event preview" />
+        <div class="legend-item">
+          <span class="dot offline"></span>Offline
         </div>
       </div>
-    </section>
+    </div>
 
+    <div class="event-image-placeholder">
+      <img src="images/18.jpg" alt="Event preview" />
+    </div>
+  </div>
+</section>
     <!-- What to Expect section -->
 <section class="what-to-expect-section">
   <h2 class="section-title">What to Expect?</h2>
@@ -374,8 +374,8 @@
     </div>
         <!-- parking section -->
     <div class="parking-section-container">
-              <div class="parking-section-title"><h3>How to find us</h3></div>
-        <div class="parking-content-wrapper">
+          <div class="parking-section-title"><h3>How to find us</h3></div>
+               <div class="parking-content-wrapper">
     
             <div class="video-block">
                 <div class="video-wrapper">
@@ -408,7 +408,7 @@
         </div>
     </div>
    
-
+     </section>
     <script src="script2.js"></script>
   </body>
 </html>
