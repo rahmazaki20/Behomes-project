@@ -881,7 +881,7 @@ body {
 
 /* map section */
 .map-section {
-    width: 80%;
+    width: 76%;
     margin: 80px auto;
     display: flex;
     flex-direction: column;
