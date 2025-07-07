@@ -1,8 +1,8 @@
 const events = [
     { date: '2025-04-12', type: 'online', topic: 'Art' },
-    { date: '2025-04-13', type: 'offline', topic: 'Tech' },
-    { date: '2025-04-19', type: 'online', topic: 'Music' },
-    { date: '2025-04-20', type: 'offline', topic: 'Science' },
+    { date: '2025-07-13', type: 'offline', topic: 'Tech' },
+    { date: '2025-07-19', type: 'online', topic: 'Music' },
+    { date: '2025-08-20', type: 'offline', topic: 'Science' },
     { date: '2025-04-25', type: 'online', topic: 'Art' },
     { date: '2025-04-26', type: 'offline', topic: 'Tech' },
     { date: '2025-04-27', type: 'online', topic: 'Music' },
@@ -25,7 +25,6 @@ const navArrows = document.querySelectorAll(".nav-arrow");
 // Keep track of selected month
 // Set initial date to current date based on your context (July 7, 2025)
 let currentDate = new Date(2025, 6, 7); // July 7, 2025 (months are 0-indexed)
-
 function renderCalendar(filter = {}) {
     calendarGrid.innerHTML = "";
 
@@ -52,7 +51,11 @@ function renderCalendar(filter = {}) {
         );
 
         const span = document.createElement("span");
-        span.textContent = day;
+        const dayNumber = document.createElement("span");
+        dayNumber.classList.add("day-number");
+        dayNumber.textContent = day;
+        span.appendChild(dayNumber);
+
 
         // Check if it's today's date
         if (year === todayYear && month === todayMonth && day === todayDay) {
@@ -60,19 +63,19 @@ function renderCalendar(filter = {}) {
         }
 
         if (event) {
-            span.classList.add("highlighted");
+            span.classList.add("has-event"); // Add 'has-event' class for full opacity
+            // If it's today AND has an event, 'today' class will handle the background and color.
+            // If it's not today but has an event, 'has-event' ensures full opacity.
 
             const dot = document.createElement("span");
             dot.classList.add("dot", event.type === "online" ? "online" : "offline");
             span.appendChild(dot);
         } else {
             // If no event and it's not today's date, apply low opacity
-            // If it's today's date but no event, it will still get 'today' styling
             if (!(year === todayYear && month === todayMonth && day === todayDay)) {
-                span.classList.add("no-event-low-opacity");
+                span.classList.add("no-event"); // Add 'no-event' for lower opacity
             }
         }
-
         calendarGrid.appendChild(span);
     }
 }

@@ -336,47 +336,34 @@ body {
     text-align: center;
     font-size: 16px;
 }
-
 .calendar-grid span {
-    /* padding: 5px 0; */
     border-radius: 4px;
-    background-color: transparent;
-    border: 1px solid #272D42;
+    background-color: #1c2239;
     color: #fff;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 48px;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease; /* Add transition for smooth changes */
+    padding-top: 4px; /* small top padding */
+    transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease;
 }
 
-/* Style for today's date */
-.calendar-grid span.today {
-    background-color: #CC9D6A; /* Background color for today */
-    color: #131022; /* Text color for today */
-    border-color: #CC9D6A; /* Border color for today */
-    opacity: 1 !important; /* Ensure today's date always has full opacity */
+.calendar-grid span .day-number {
+    font-size: 14px;
+    line-height: 1;
+    height: 18px;     /* control vertical size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
-/* Style for days with highlighted events */
-.calendar-grid span.highlighted {
-    background-color: #CC9D6A;
-    color: #131022;
-    font-weight: 700;
-    border: 1px solid #CC9D6A;
-    opacity: 1 !important; /* Ensure highlighted events always have full opacity */
+.calendar-grid span.no-event .day-number {
+    opacity: 0.4;
 }
-
-/* Style for days with no events (low opacity text) */
-.calendar-grid span.no-event-low-opacity {
-    color: rgba(255, 255, 255, 0.4); /* Lower opacity for text */
-    background-color: transparent; /* Ensure no background color unless it's today */
-    border: 1px solid #272D42; /* Maintain border */
-}
-
 
 .calendar-grid .dot {
     width: 6px;
@@ -384,15 +371,30 @@ body {
     border-radius: 50%;
     display: block;
     margin-top: 4px;
-    padding: 0;
 }
+
+/* Style for today's date */
+.calendar-grid span.today {
+    background-color: #CC9D6A; 
+    /* color: #131022;  */
+    border-color: #CC9D6A;
+    opacity: 1 !important;
+}
+.calendar-grid span.today .day-number{
+      background-color: #CC9D6A; 
+}
+
+
 
 .calendar-grid .dot.online {
     background-color: #31C48D;
+    margin-top: 10px; /* Adjusted for better visibility */
 }
 
 .calendar-grid .dot.offline {
     background-color: #F56565;
+        margin-top: 10px; /* Adjusted for better visibility */
+
 }
 
 .event-type-legend {
@@ -500,6 +502,9 @@ body {
         flex-grow: 0;
     }
 }
+
+
+
 /* What to Expect Section */
 .what-to-expect-section {
     width: 100%;
