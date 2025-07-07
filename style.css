@@ -193,22 +193,20 @@ body {
 .speakers-container {
     width: 80%;
     margin: auto;
-    padding: 2rem;
-    box-sizing: border-box;
+
 }
 
 .speakers-header {
     display: flex;
-    align-items: center;
+
     margin-bottom: 46px;
-    flex-wrap: wrap;
-    gap: 1rem;
+
 }
 
 .speakers-header h2 {
     font-size: 40px;
     font-weight: 800;
-    margin: 0;
+
 }
 
 .speaker-grid {
@@ -316,22 +314,22 @@ body {
 /* <!-- About the digital conference --> */
 
 .about-conference-section {
-    /* max-width: 1440px; */
-    width: 75%;
+
+    width: 76%;
     margin: auto;
-    padding: 2rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    /* box-sizing: border-box; */
+
 }
 
 .about-content {
     flex: 1;
-    max-width: 800px;
+
     text-align: center;
+
     margin-top: 185px;
 }
 
@@ -355,10 +353,10 @@ body {
 
 .about-images {
     width: 100%;
-    max-width: 511px;
+
     height: auto;
     position: relative;
-    box-sizing: border-box;
+
 }
 
 .about-images img {
@@ -468,12 +466,12 @@ body {
 /* <!-- Agenda section --> */
 
 .container-agenda {
-    width: 75%;
+    width: 77.5%;
     margin: auto;
     display: flex;
-
     padding: 40px 20px;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .sidebar {
@@ -659,33 +657,32 @@ body {
 /* <!-- QRCode section --> */
 .networking-section {
     background-color: #CC9D6A;
-    padding: 4rem 1.5rem;
+    padding: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    box-sizing: border-box;
+
 }
 
 .networking-container {
-    width: 75%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    justify-content: center;
+    gap: 8rem;
     align-items: center;
 }
 
 .qr-card-column {
     position: relative;
     width: 100%;
-    max-width: 636px;
-    height: 338px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    box-sizing: border-box;
+
 }
 
 .qr-card-column .background-image {
@@ -701,12 +698,10 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+
     justify-content: center;
     width: 80%;
-    height: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
+
     color: #1a202c;
 }
 
@@ -714,7 +709,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+
 }
 
 .qr-content-overlay img.qr-code {
@@ -722,7 +717,7 @@ body {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin: 1.5rem 0 1rem 0;
+
     z-index: 2;
 }
 
@@ -733,7 +728,7 @@ body {
     line-height: 1.2;
     margin: 0;
     text-align: center;
-    margin-bottom: 1rem;
+
 }
 
 .join-button {
@@ -748,7 +743,7 @@ body {
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 200px;
+
     text-align: center;
 }
 
@@ -759,11 +754,12 @@ body {
 .networking-text-column {
     flex: 1;
     text-align: center;
-    max-width: 600px;
+
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .networking-text-column h2 {
@@ -772,18 +768,17 @@ body {
     font-size: 40px;
     line-height: 125%;
     letter-spacing: 0px;
-    margin-bottom: 1rem;
+
 }
 
 .networking-text-column .bullet-point {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
+
     color: #f0f0f0;
-    text-align: left;
+
     width: 100%;
-    max-width: 450px;
+
 }
 
 .networking-text-column .bullet-point .icon-circle {
@@ -885,13 +880,12 @@ body {
 
 /* map section */
 .map-section {
-    width: 75%;
+    width: 80%;
     margin: 80px auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-sizing: border-box;
-    padding: 2rem;
+
     border-radius: 8px;
 }
 
@@ -901,21 +895,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+
 }
 
 .map-header h2 {
-    font-family: 'Manrope', sans-serif;
+
     font-weight: 800;
     font-size: 24px;
     line-height: 140%;
     letter-spacing: 0px;
     color: #ffffff;
-    margin: 0;
+
 }
 
 .map-header p {
-    font-family: 'Manrope', sans-serif;
+
     font-weight: 800;
     font-size: 40px;
     line-height: 125%;
@@ -1072,33 +1066,25 @@ body {
 
 /* <!-- parking section --> */
 .parking-section-container {
-
     width: 80%;
-    margin: 180px auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    box-sizing: border-box;
+   
+
 }
 
 .parking-content-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 2rem;
     border-radius: 8px;
-    padding: 2rem;
-    box-sizing: border-box;
     align-items: center;
-    overflow: hidden;
-    background-color: transparent;
-    box-shadow: none;
+    
 }
 
 .video-block {
     width: 100%;
-    max-width: 306px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1111,8 +1097,7 @@ body {
     height: 0;
     width: 100%;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: none;
+
 }
 
 .video-wrapper video {
