@@ -1,25 +1,20 @@
 
 body {
     margin: 0;
+    padding: 0;
+}
+.events-body-container{
     font-family: 'Manrope', sans-serif;
     background-color: #10162E;
     box-sizing: border-box;
-
-    /* justify-content: center; */
-    /* align-items: center; */
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-.container {
-    /* display: flex; */
-    /* flex-direction: column; */
+.events-container{
     width: 100%;
     margin: 0 auto;
-    /* min-height: 100vh; */
     overflow: hidden;
-    /* max-width: 1920px; */
-    /* position: relative; */
 }
 
 .image-section {
@@ -52,9 +47,9 @@ body {
     padding: 40px;
     position: absolute;
     top: 114px;
-    left: 1000px; /* This is the specific spacing from your initial request, not 50px */
-    width: 653px; /* Fixed width as per Figma */
-    height: 636px; /* Fixed height as per Figma */
+    left: 1000px; 
+    width: 653px; 
+    height: 636px; 
     z-index: 10;
 }
 
@@ -115,7 +110,7 @@ body {
 
 .primary-btn {
     background-color: #CC9D6A;
-    color:#131022;
+    color:#FFFFFF;
 }
 
 .primary-btn:hover {
@@ -204,11 +199,9 @@ body {
 }
 
  /* <!-- Browse Events section --> */
+
 .browse-events-section {
-    width: 100%;
-    max-width: 1296px;
-    padding: 60px 20px;
-    box-sizing: border-box;
+    width: 75%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -216,41 +209,29 @@ body {
 }
 
 .browse-events-header {
-    width: 120%;
     display: flex;
     margin: auto;
     align-items: center;
-    justify-content: center;
     margin-bottom: 40px;
-    flex-wrap: wrap;
-    gap: 16px;
 }
-
 .filters {
     display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 200px;
 }
-
 .dropdown-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     flex-grow: 1;
     min-width: 250px;
-   
 }
-
 .format-reset-wrapper {
     display: flex;
     flex-grow: 1;
     gap: 16px;
     min-width: 250px;
     flex-wrap: wrap;
-    
 }
-
 .dropdown-select {
     width: 100%;
     background-color: transparent;
@@ -291,7 +272,7 @@ body {
 }
 
 .reset-button:hover {
-    background-color: #666F8F;
+    background-color: #CC9D6A;
     color: #FFFFFF;
 }
 
@@ -299,22 +280,16 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: transparent;
     border-radius: 8px;
-    padding: 40px;
     box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
 }
 
 .calendar-section {
-    width: 100%;
-    max-width: 440px;
-    min-width: 300px;
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
+    margin-bottom: 0;
+    margin-right: 0;
 }
 
 .calendar-header {
@@ -375,14 +350,33 @@ body {
     align-items: center;
     height: 48px;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease; /* Add transition for smooth changes */
 }
 
+/* Style for today's date */
+.calendar-grid span.today {
+    background-color: #CC9D6A; /* Background color for today */
+    color: #131022; /* Text color for today */
+    border-color: #CC9D6A; /* Border color for today */
+    opacity: 1 !important; /* Ensure today's date always has full opacity */
+}
+
+/* Style for days with highlighted events */
 .calendar-grid span.highlighted {
     background-color: #CC9D6A;
     color: #131022;
     font-weight: 700;
     border: 1px solid #CC9D6A;
+    opacity: 1 !important; /* Ensure highlighted events always have full opacity */
 }
+
+/* Style for days with no events (low opacity text) */
+.calendar-grid span.no-event-low-opacity {
+    color: rgba(255, 255, 255, 0.4); /* Lower opacity for text */
+    background-color: transparent; /* Ensure no background color unless it's today */
+    border: 1px solid #272D42; /* Maintain border */
+}
+
 
 .calendar-grid .dot {
     width: 6px;
@@ -431,13 +425,11 @@ body {
 
 .event-image-placeholder {
     width: 100%;
-    background-color: transparent;
+    height: 100%;
     border-radius: 8px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    min-height: 200px;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 .event-image-placeholder img {
@@ -446,6 +438,7 @@ body {
     object-fit: cover;
     display: block;
 }
+
 
 @media (min-width: 768px) {
     .browse-events-section {
@@ -507,8 +500,6 @@ body {
         flex-grow: 0;
     }
 }
-
-
 /* What to Expect Section */
 .what-to-expect-section {
     width: 100%;
