@@ -1260,13 +1260,12 @@ body {
 
         /* <!-- parking section --> */
      .parking-section-container {
-        max-width: 1296px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        box-sizing: border-box;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
     }
+    
     .parking-section-title {
        margin:auto;
        margin-top: 180px;
@@ -1279,139 +1278,131 @@ body {
     .parking-content-wrapper {
         display: flex;
         flex-direction: column;
-        width: 100%;
         gap: 2rem;
         border-radius: 8px;
-        padding: 2rem;
-        box-sizing: border-box;
         align-items: center;
-        overflow: hidden;
-        background-color: transparent;
-        box-shadow: none;
         margin-top: 0px !important ;
     }
   
     .video-block {
-        width: 100%;
-        max-width: 306px;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+   width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     }
 
     .video-wrapper {
-        position: relative;
-        padding-bottom: calc(634 / 306 * 100%);
-        height: 0;
-        width: 100%;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: none;
+    position: relative;
+    padding-bottom: calc(634 / 306 * 100%);
+    height: 0;
+    width: 100%;
+    border-radius: 8px;
     }
 
     .video-wrapper video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     }
 
     .video-wrapper .play-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        fill: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
     }
 
-    .video-caption {
-        font-weight: 800;
-        font-size: 20px;
-        line-height: 140%;
-        letter-spacing: 0px;
-        color: #ffffff;
-        margin-top: 24px;
-        width: 100%;
-        height: auto;
-        opacity: 0.85;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-    }
+.video-caption {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    color: #ffffff;
+    margin-top: 24px;
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
 
-    .image-text-block {
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        overflow: hidden;
-        background-color: transparent;
-        box-shadow: none;
-    }
+.image-text-block {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: none;
+}
 
-    .image-text-block img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        display: block;
-        opacity: 0.7;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
 
-    .parking-overlay-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 20px;
-        box-sizing: border-box;
-        z-index: 2;
-    }
 
-    .parking-keyword-box {
-        background-color: rgba(45, 55, 72, 0.8);
-        border-radius: 30px;
-        padding: 12px 24px;
-        width: auto;
-        height: auto;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2;
-        margin-bottom: 15px;
-    }
+.image-text-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
-    .parking-keyword-box h3 {
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 125%;
-        letter-spacing: 0px;
-        margin: 0;
-        color: #ffffff;
-        text-align: center;
-    }
+.parking-overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
 
+  
+.parking-keyword-box {
+    background-color: rgba(45, 55, 72, 0.8);
+    border-radius: 30px;
+    padding: 12px 24px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+.parking-keyword-box h3 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
     .cost-details {
         width: auto;
         height: auto;
