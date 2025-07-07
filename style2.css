@@ -226,15 +226,12 @@ body {
     display: flex;
     align-items: center;
     flex-grow: 1;
-    min-width: 250px;
+    width: 100%;
 }
 
 .format-reset-wrapper {
     display: flex;
-    flex-grow: 1;
     gap: 16px;
-    min-width: 250px;
-    flex-wrap: wrap;
 }
 
 .dropdown-select {
