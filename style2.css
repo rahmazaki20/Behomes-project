@@ -479,7 +479,59 @@ body {
 }
 
 
+/* ✅ RESPONSIVE HANDLING */
+
+/* 📱 Small screens */
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .dropdown-wrapper,
+  .dropdown-wrapper2,
+  .event-topic-dropdown,
+  .format-dropdown,
+  .reset-button {
+    width: 100% !important;
+  }
+
+  .format-reset-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .browse-events-content {
+    flex-direction: column;
+  }
+
+  .calendar-section,
+  .event-image-placeholder {
+    width: 100% !important;
+  }
+}
+
+/* 🧱 Medium screens */
 @media (min-width: 768px) and (max-width: 991px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .format-reset-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .reset-button {
+    width: 100%;
+  }
+
+  .event-topic-dropdown,
+  .format-dropdown {
+    width: 100%;
+  }
+
   .browse-events-content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -491,46 +543,24 @@ body {
     flex: 1 1 48%;
     max-width: 48%;
   }
+}
 
-  .filters {
-    flex-direction: column;
-    gap: 12px;
+/* 🖥️ Large screens (already mostly OK) */
+@media (min-width: 1200px) {
+  .browse-events-section {
+    padding: 60px 132px;
+  }
+
+  .event-image-placeholder {
+    width: 630px;
+    flex-grow: 0;
   }
 
   .format-reset-wrapper {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .reset-button {
-    width: 100%;
-  }
-
-  .event-topic-dropdown,
-  .format-dropdown {
-    width: 100%;
+    width: 630px;
+    flex-grow: 0;
   }
 }
-
-
-
-@media (min-width: 1200px) {
-    .browse-events-section {
-        padding: 60px 132px;
-    }
-
-    .event-image-placeholder {
-        width: 630px;
-        flex-grow: 0;
-    }
-
-    .format-reset-wrapper {
-        width: 630px;
-        flex-grow: 0;
-    }
-}
-
-
 
 /* What to Expect Section */
 .what-to-expect-section {
